@@ -1,0 +1,396 @@
+/*
+Theme Name: Interest
+Author: Tyler Akin
+Description: Originally a Custom HTML Site, Then Converted To Wordpress
+Version: 0.0.1
+*/
+
+/******************************************
+General Styles
+******************************************/
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  /*background-color: rgb(230, 242, 255);*/
+  overflow-x: hidden;
+}
+img {
+  border-style: none;
+  max-width: 100%;
+}
+li {
+  font-size: 1.3em;
+  text-decoration: none;
+  list-style: none;
+  float: left;
+}
+
+/*ul {
+  margin: 0 auto;
+  -webkit-padding-start: 0;
+  -webkit-margin-before: 0em;
+}*/
+
+a {
+  color: rgb(255, 102, 102);
+  display: inline;
+  padding-right: 20px;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(255, 12, 12);
+}
+h2 {
+  display: block;
+  font-size: 1.5em;
+}
+
+/******************************************
+Heading Styles
+******************************************/
+
+#top-header {
+  background-color: rgb(255, 102, 102);
+  display: block;
+  height: 90px;
+  padding-bottom: 0px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#top-header img {
+  min-height: 109px;
+  max-width: 307px;
+  margin-top: -3px;
+}
+.blog-title a {
+  color: #333333;
+}
+.main-navigation {
+  background-color: rgb(230, 242, 255);
+  border: 2px solid rgb(230, 242, 255);
+  color: rgb(51, 51, 51);
+  display: block;
+  list-style: none;
+  margin-top: -10px;
+  min-height: 5em;
+  position: absolute;
+  right: 0;
+  top: 7em;
+}
+.main-navigation a {
+  color: #333;
+}
+.main-navigation a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+#show-nav {
+  color: #333;
+  max-width: 70px;
+  padding: 30px 10px 20px 10px;
+  text-align: center;
+  margin: 0px 0px 0px 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#show-nav:active {
+  /* Safari */
+  -webkit-transform: rotate(-20deg);
+
+  /* Firefox */
+  -moz-transform: rotate(-20deg);
+
+  /* IE */
+  -ms-transform: rotate(-20deg);
+
+  /* Opera */
+  -o-transform: rotate(-20deg);
+}
+#show-nav.active {
+  background-color: rgb(230, 242, 255);
+  border: 2px solid rgb(230, 242, 255);
+  /* Safari */
+  -webkit-transform: rotate(-20deg);
+
+  /* Firefox */
+  -moz-transform: rotate(-20deg);
+
+  /* IE */
+  -ms-transform: rotate(-20deg);
+
+  /* Opera */
+  -o-transform: rotate(-20deg);
+}
+
+#show-nav:hover {
+  background-color: rgb(230, 242, 255);
+  border: 2px solid rgb(230, 242, 255);
+}
+
+/******************************************
+Design Options Blocks
+******************************************/
+
+#blocks {
+  margin-top: 10em;
+}
+#blocks {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5em;
+  position: relative;
+}
+#blocks div {
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 1em;
+  max-width: 426px;
+  position: relative;
+}
+#blocks div div {
+  margin: 0 auto;
+  margin-top: -19.4em;
+  max-width: 426px;
+  position: relative;
+}
+@media screen and (min-width: 750px) {
+  #blocks div {
+    max-width: 50%;
+  }
+  #blocks div div {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1050px) {
+  #blocks div {
+    max-width: 33.3%;
+  }
+  #blocks div div {
+    max-width: 100%;
+  }
+}
+#blocks div img {
+  height: 16em;
+}
+#template-block {
+  width: 100%;
+}
+#wordpress-block {
+  width: 100%;
+}
+#custom-work-block {
+  width: 100%;
+}
+
+/******************************************
+Hidden Design Block Styles
+******************************************/
+
+#wordpress-hidden, #scratch-hidden, #template-hidden {
+  color: rgb(255, 255, 255);
+  font-size: 1.1em;
+  margin: 0 auto;
+  padding-top: 2em;
+  text-align: center;
+  width: 320px;
+}
+.design-info-maintain, .design-info-word, .design-info-scratch {
+  height: 16em;
+  background-color: rgb(102, 140, 255);
+  position: absolute;
+  font-family: 'Crimson Text', serif;
+  opacity: .9;
+}
+#hidden-scratch-photo-center {
+  width: 36%;
+  display: inline;
+  margin-right: 0px;
+  margin-left: 360px;
+  margin-top: 3px;
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 0px;
+}
+
+/* Info Buttons Hide/Show */
+
+.hide-info-button-scratch, .hide-info-button-template, .hide-info-button-word {
+  bottom: 1em;
+  color: white;
+  right: 5em;
+  padding: 11px 16px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  position: absolute;
+}
+.more-info-button-template, .more-info-button-scratch, .more-info-button-word {
+  bottom: 1em;
+  color: white;
+  left: 5em;
+  padding: 11px 10px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  position: absolute;
+}
+.more-info-button-template:hover, .more-info-button-scratch:hover, .more-info-button-word:hover {
+  color: #333;
+  background-color: rgb(230, 242, 255);
+  padding: 11px 10px;
+  border: 2px solid rgb(230, 242, 255);
+}
+.hide-info-button-template:hover, .hide-info-button-scratch:hover, .hide-info-button-word:hover {
+  color: #333;
+  background-color: rgb(230, 242, 255);
+  padding: 11px 16px;
+  border: 2px solid rgb(230, 242, 255);
+}
+
+/******************************************
+About Styles
+******************************************/
+
+.about {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.about p {
+  margin: 3em auto 0em auto;
+}
+#about-header {
+  margin-top: 3em;
+  margin-bottom: 80px;
+  text-align: center;
+  font-size: 2em;
+  color: rgb(51, 51, 51);
+  clear: both;
+}
+#tyler-about-pic {
+  border-radius: 100px;
+  height: 100%;
+  margin: 0 auto;
+  width: 350px;
+}
+.about-paragraph {
+  display: inline;
+  font-size: 1.1em;
+  line-height: 1.4em;
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 500px;
+  text-align: center;
+}
+@media screen and (min-width: 750px) {
+  .about-paragraph {
+    margin-top: 5em;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 850px) {
+  .about-paragraph {
+    margin-top: 3em;
+    max-width: 40%;
+    text-align: left;
+  }
+}
+
+/******************************************
+Contact Styles
+******************************************/
+
+.contact {
+  display: block;
+}
+#contact-header {
+  margin-top: 100px;
+  margin-bottom: 80px;
+  text-align: center;
+  font-size: 2em;
+  color: rgb(51, 51, 51);
+}
+.contact-paragraph {
+  text-align: center;
+  display: block;
+  margin: 0px 1% 2em 1%;
+  padding-bottom: 25px;
+  font-size: 1.1em;
+  line-height: 1.2em;
+}
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.contact-paragraph a {
+  background-color: #333;
+  box-shadow: 3px 0px 2px 1px rgba(0, 0, 0, 0.5);
+  display: block;
+  padding: 1em;
+  margin: 0 auto;
+  width: 10em;
+}
+.contact-paragraph a:hover {
+  background-color: rgb(255, 102, 102);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+/******************************************
+Footer Styles
+******************************************/
+
+#foot {
+  color: rgb(51, 51, 51);
+  background-color: rgb(102, 179, 255);
+  height: 70px;
+  margin-top: 30px;
+  padding-top: 35px;
+  text-align: center;
+}
+#foot a {
+  text-align: center;
+  color: rgb(51, 51, 51);
+  float: none;
+  padding-right: 0px;
+}
+#foot p {
+  padding-bottom: -20px;
+}
+.design-labels {
+  text-align: center;
+}
+
+/******************************************
+Design Option Page Styles
+******************************************/
+
+.design-paragraph-headers {
+  font-size: 1.3em;
+  margin: 2em auto 0em auto;
+  text-align: center;
+  width: 90%;
+}
+.design-paragraphs {
+  font-size: 1.2em;
+  margin: .5em auto 0em auto;
+  text-align: justify;
+  text-indent: -5px;
+  width: 90%;
+}
+
+/******************************************
+Blog Styles
+******************************************/
+
+
+.blog-post {
+  margin: 0 auto;
+  margin-bottom: 2em;
+  width: 95%;
+}
