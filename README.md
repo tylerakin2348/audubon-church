@@ -1,2 +1,2 @@
-# Web Interest Web Design Website
-This is a site that I am building for website design. I am currently integrating wordpress into the original html site.
+# The Church in Audubon Park - Site Redesign
+This is a Redesign for Audubon Park Church's web presencey.
