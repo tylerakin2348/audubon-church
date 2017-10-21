@@ -1,0 +1,467 @@
+/******************************************
+General Styles
+******************************************/
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  overflow-x: hidden; }
+
+img {
+  border-style: none;
+  height: auto;
+  max-height: 25rem;
+  max-width: 100%; }
+
+li {
+  font-size: 1.3em;
+  text-decoration: none;
+  list-style: none;
+  float: left;
+  margin: 0 auto; }
+
+ul {
+  margin: 0 auto;
+  -webkit-padding-start: 0;
+  -webkit-margin-before: 0; }
+
+a {
+  color: #ff6666;
+  display: inline;
+  padding-right: 10px;
+  text-decoration: none; }
+  a:hover {
+    color: #ff0c0c; }
+
+h2 {
+  display: block;
+  font-size: 1.5em; }
+
+/******************************************
+Heading Styles
+******************************************/
+#top-header {
+  background: #ff6666;
+  display: block;
+  height: 90px;
+  padding-bottom: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+  #top-header img {
+    max-height: 100px;
+    max-width: 307px; }
+
+.blog-title a {
+  color: #333333; }
+
+.main-navigation {
+  background: rgba(255, 102, 102, 0);
+  border: 2px solid #e6f2ff;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+  margin-top: -10px;
+  min-height: 5em;
+  position: fixed;
+  right: 0;
+  top: 7em;
+  transition: background 3.2s ease;
+  width: 100%;
+  z-index: 99; }
+  @media screen and (min-width: 750px) {
+    .main-navigation {
+      width: 50%; } }
+  @media screen and (min-width: 1050px) {
+    .main-navigation {
+      width: 33.3%; } }
+  .main-navigation a {
+    color: #333;
+    margin: 0 auto;
+    padding: 0 10px; }
+    .main-navigation a:hover {
+      text-decoration: underline; }
+
+.add-color {
+  background: #ff6666; }
+
+.menu-main-menu-container {
+  margin: 0 auto; }
+
+.menu-item-has-children {
+  position: relative;
+  transition: all 1s ease; }
+  .menu-item-has-children .sub-menu {
+    background: #333;
+    border: 2px solid #e6f2ff;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    flex-direction: row;
+    list-style: none;
+    margin-top: -2em;
+    min-height: 5em;
+    opacity: 0;
+    position: fixed;
+    line-height: 5em;
+    right: 0;
+    top: 7em;
+    width: 100%;
+    z-index: 99; }
+    @media screen and (min-width: 750px) {
+      .menu-item-has-children .sub-menu {
+        width: 50%; } }
+    @media screen and (min-width: 1050px) {
+      .menu-item-has-children .sub-menu {
+        width: 33.33%; } }
+    .menu-item-has-children .sub-menu a {
+      color: #fff; }
+    .menu-item-has-children .sub-menu li {
+      font-size: 1rem; }
+
+@media screen and (min-width: 800px) {
+  .menu-item-has-children:hover {
+    padding-bottom: 0; } }
+.menu-item-has-children:hover .sub-menu {
+  transition: all 3s ease;
+  justify-content: center;
+  margin-top: 4em;
+  max-height: 25em;
+  min-height: 5em;
+  opacity: 1;
+  z-index: -1; }
+
+#show-nav {
+  background: inherit;
+  color: #333;
+  max-width: 70px;
+  padding: 30px 10px 20px;
+  text-align: center;
+  transition: background 2.8s, max-width 0.4s ease;
+  margin: 0 0 0 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100; }
+  #show-nav :active {
+    /* Safari */
+    -webkit-transform: rotate(-20deg);
+    /* Firefox */
+    -moz-transform: rotate(-20deg);
+    /* IE */
+    -ms-transform: rotate(-20deg);
+    /* Opera */
+    -o-transform: rotate(-20deg); }
+  #show-nav.active {
+    background: #333;
+    border: 2px solid #e6f2ff;
+    color: #fff;
+    /* Safari */
+    -webkit-transform: rotate(-20deg);
+    /* Firefox */
+    -moz-transform: rotate(-20deg);
+    /* IE */
+    -ms-transform: rotate(-20deg);
+    /* Opera */
+    -o-transform: rotate(-20deg); }
+  #show-nav:hover {
+    max-width: 80px; }
+
+img.homepage_image {
+  height: auto;
+  width: 100%;
+  max-height: calc(100vh - 90px); }
+
+/******************************************
+Design Options Blocks
+******************************************/
+#blocks {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative; }
+  #blocks div {
+    /* Affects positioning of template blocks */
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1em auto 0;
+    max-width: 426px;
+    position: relative; }
+    @media screen and (min-width: 750px) {
+      #blocks div {
+        max-width: 50%; } }
+    @media screen and (min-width: 1050px) {
+      #blocks div {
+        max-width: 33.33%; } }
+    #blocks div img {
+      height: 16em; }
+  #blocks div div {
+    /* Affects positioning of hidden overlays */
+    margin: -17.25em auto 0;
+    max-width: 426px;
+    position: relative; }
+    @media screen and (min-width: 750px) {
+      #blocks div div {
+        max-width: 100%; } }
+
+#template-block,
+#wordpress-block,
+#custom-work-block {
+  width: 100%; }
+
+/******************************************
+Hidden Design Block Styles
+******************************************/
+#wordpress-hidden,
+#scratch-hidden,
+#template-hidden {
+  color: white;
+  font-size: 1.1em;
+  margin: 0 auto;
+  padding-top: 2em;
+  text-align: center;
+  width: 320px; }
+
+.design-info-maintain,
+.design-info-word,
+.design-info-scratch {
+  height: 16em;
+  background: #668cff;
+  position: absolute;
+  font-family: 'Crimson Text', serif;
+  opacity: 0.9; }
+
+#hidden-scratch-photo-center {
+  width: 36%;
+  display: inline;
+  margin-right: 0;
+  margin-left: 360px;
+  margin-top: 3px;
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 0; }
+
+/* Info Buttons Hide/Show */
+.hide-info-button-scratch,
+.hide-info-button-template,
+.hide-info-button-word {
+  bottom: 1em;
+  color: white;
+  right: 5em;
+  padding: 11px 16px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  position: absolute; }
+  .hide-info-button-scratch:hover,
+  .hide-info-button-template:hover,
+  .hide-info-button-word:hover {
+    color: #333;
+    background: #e6f2ff;
+    padding: 11px 16px;
+    border: 2px solid #e6f2ff; }
+
+.more-info-button-template,
+.more-info-button-scratch,
+.more-info-button-word {
+  bottom: 1em;
+  color: white;
+  left: 5em;
+  padding: 11px 10px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  position: absolute; }
+  .more-info-button-template:hover,
+  .more-info-button-scratch:hover,
+  .more-info-button-word:hover {
+    color: #333;
+    background: #e6f2ff;
+    padding: 11px 10px;
+    border: 2px solid #e6f2ff; }
+
+/******************************************
+Page Tempalte Styles
+******************************************/
+.page,
+.blog-page,
+.front-page,
+.full-width-page {
+  margin: 0 auto;
+  min-height: 100%;
+  text-align: left; }
+
+.page {
+  width: 90vw; }
+
+.blog-page {
+  margin-top: 10rem; }
+  .blog-page .container__inner {
+    margin: 0 auto;
+    width: 90vw; }
+
+.full-width-page {
+  width: 90vw; }
+
+/******************************************
+About Styles
+******************************************/
+.about {
+  background: #333;
+  color: #fff;
+  display: none;
+  height: auto;
+  margin: 0 auto;
+  padding: 5em 0;
+  position: fixed;
+  top: 25%;
+  text-align: center;
+  width: 100%; }
+  .about img {
+    padding-bottom: 3em; }
+    @media screen and (min-width: 750px) {
+      .about img {
+        padding-bottom: 0; } }
+  .about .svg {
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 2rem; }
+  .about p {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 30%;
+    margin: auto; }
+
+.shadow-box {
+  transition: all 2.8s ease;
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 750px) {
+    .shadow-box {
+      flex-direction: row; } }
+
+#tyler-about-pic {
+  border-radius: 100px;
+  height: 100%;
+  margin: 0 auto;
+  width: 350px; }
+
+.about-paragraph {
+  display: inline;
+  font-size: 1.1em;
+  line-height: 1.4em;
+  margin: 50px auto 0;
+  max-width: 500px;
+  text-align: center; }
+  @media screen and (min-width: 750px) {
+    .about-paragraph {
+      margin-top: 5em;
+      text-align: left; } }
+  @media screen and (min-width: 850px) {
+    .about-paragraph {
+      margin-top: 3em;
+      max-width: 40%;
+      text-align: left; } }
+
+/******************************************
+Contact Styles
+******************************************/
+.contact {
+  background: #333;
+  color: #fff;
+  display: none;
+  height: auto;
+  margin: 0 auto;
+  padding: 5em 0;
+  position: fixed;
+  top: 25%;
+  text-align: center;
+  width: 100%; }
+  .contact .svg {
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 2rem; }
+
+.shadow-box {
+  transition: all 2.8s ease;
+  display: flex;
+  flex-direction: column; }
+
+.contact-paragraph {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding-bottom: 25px;
+  font-size: 1.1em;
+  line-height: 1.2em;
+  max-width: 45rem; }
+  .contact-paragraph a {
+    background: #333;
+    box-shadow: 3px 0 2px 1px rgba(0, 0, 0, 0.5);
+    display: block;
+    padding: 1em;
+    margin: 0 auto;
+    width: 10em; }
+    .contact-paragraph a:hover {
+      background: #ff6666;
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+      color: #333; }
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 75vw;
+  max-width: 50rem; }
+
+/******************************************
+Footer Styles
+******************************************/
+#foot {
+  color: #fafafa;
+  background: #333;
+  height: 70px;
+  margin-top: 30px;
+  padding-top: 35px;
+  text-align: center; }
+  #foot a {
+    text-align: center;
+    color: #fafafa;
+    float: none;
+    padding-right: 0; }
+
+.design-labels {
+  text-align: center; }
+
+/******************************************
+Design Option Page Styles
+******************************************/
+.design-paragraph-headers {
+  font-size: 1.3em;
+  margin: 2em auto 0;
+  text-align: center;
+  width: 90%; }
+
+.design-paragraphs {
+  line-height: 1.5em;
+  margin: 0.5em auto 0;
+  text-align: justify;
+  text-indent: 25px;
+  width: 90%; }
+
+/******************************************
+Blog Styles
+******************************************/
+.blog-post {
+  margin: 0 auto 2em;
+  width: 95%; }
+
+/*# sourceMappingURL=style.css.map */
