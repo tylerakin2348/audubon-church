@@ -1,3 +1,9 @@
+/**
+* style.scss imports each of the style sheets
+**/
+/*
+* Variables Style Sheet
+*/
 /******************************************
 General Styles
 ******************************************/
@@ -38,18 +44,6 @@ h2 {
 /******************************************
 Heading Styles
 ******************************************/
-#top-header {
-  background: #ff6666;
-  display: block;
-  height: 90px;
-  padding-bottom: 0;
-  position: absolute;
-  top: 0;
-  width: 100%; }
-  #top-header img {
-    max-height: 100px;
-    max-width: 307px; }
-
 .blog-title a {
   color: #333333; }
 
@@ -426,7 +420,7 @@ Contact Styles
 Footer Styles
 ******************************************/
 #foot {
-  color: #fafafa;
+  color: #ffffff;
   background: #333;
   height: 70px;
   margin-top: 30px;
@@ -434,7 +428,7 @@ Footer Styles
   text-align: center; }
   #foot a {
     text-align: center;
-    color: #fafafa;
+    color: #ffffff;
     float: none;
     padding-right: 0; }
 
@@ -463,5 +457,16 @@ Blog Styles
 .blog-post {
   margin: 0 auto 2em;
   width: 95%; }
+
+#top-header {
+  display: block;
+  height: 90px;
+  padding-bottom: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+  #top-header img {
+    max-height: 100px;
+    max-width: 307px; }
 
 /*# sourceMappingURL=style.css.map */
