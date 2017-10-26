@@ -1,0 +1,110 @@
+/******************************************
+Design Options Blocks
+******************************************/
+#blocks {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  div {
+    /* Affects positioning of template blocks */
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 1em auto 0;
+      max-width: 426px;
+      position: relative;
+      @media screen and (min-width: 750px) {
+          max-width: 50%;
+      }
+      @media screen and (min-width: 1050px) {
+          max-width: 33.33%;
+      }
+      img {
+          height: 16em;
+      }
+  }
+  div div {
+    /* Affects positioning of hidden overlays */
+      margin: -17.25em auto 0;
+      max-width: 426px;
+      position: relative;
+      @media screen and (min-width: 750px) {
+          max-width: 100%;
+      }
+  }
+}
+
+#template-block,
+#wordpress-block,
+#custom-work-block {
+  width: 100%;
+}
+/******************************************
+Hidden Design Block Styles
+******************************************/
+#wordpress-hidden,
+#scratch-hidden,
+#template-hidden {
+  color: rgb(255, 255, 255);
+  font-size: 1.1em;
+  margin: 0 auto;
+  padding-top: 2em;
+  text-align: center;
+  width: 320px;
+}
+.design-info-maintain,
+.design-info-word,
+.design-info-scratch {
+  height: 16em;
+  background: rgb(102, 140, 255);
+  position: absolute;
+  font-family: 'Crimson Text', serif;
+  opacity: 0.9;
+}
+
+#hidden-scratch-photo-center {
+  width: 36%;
+  display: inline;
+  margin-right: 0;
+  margin-left: 360px;
+  margin-top: 3px;
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 0;
+}
+/* Info Buttons Hide/Show */
+.hide-info-button-scratch,
+.hide-info-button-template,
+.hide-info-button-word {
+  bottom: 1em;
+  color: white;
+  right: 5em;
+  padding: 11px 16px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  position: absolute;
+  &:hover {
+      color: #333;
+      background: rgb(230, 242, 255);
+      padding: 11px 16px;
+      border: 2px solid rgb(230, 242, 255);
+  }
+}
+.more-info-button-template,
+.more-info-button-scratch,
+.more-info-button-word {
+  bottom: 1em;
+  color: white;
+  left: 5em;
+  padding: 11px 10px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  position: absolute;
+  &:hover {
+      color: #333;
+      background: rgb(230, 242, 255);
+      padding: 11px 10px;
+      border: 2px solid rgb(230, 242, 255);
+  }
+}

@@ -1,0 +1,21 @@
+/******************************************
+Footer Styles
+******************************************/
+#foot {
+  color: $white;
+  background: #333;
+  height: 70px;
+  margin-top: 30px;
+  padding-top: 35px;
+  text-align: center;
+  a {
+      text-align: center;
+      color: $white;
+      float: none;
+      padding-right: 0;
+  }
+}
+
+.design-labels {
+  text-align: center;
+}

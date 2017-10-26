@@ -1,9 +1,28 @@
-/**
+/******************************
 * style.scss imports each of the style sheets
-**/
+*****************************/
 /*
 * Variables Style Sheet
 */
+/******************************************
+Footer Styles
+******************************************/
+#foot {
+  color: #ffffff;
+  background: #333;
+  height: 70px;
+  margin-top: 30px;
+  padding-top: 35px;
+  text-align: center; }
+  #foot a {
+    text-align: center;
+    color: #ffffff;
+    float: none;
+    padding-right: 0; }
+
+.design-labels {
+  text-align: center; }
+
 /******************************************
 General Styles
 ******************************************/
@@ -47,232 +66,16 @@ Heading Styles
 .blog-title a {
   color: #333333; }
 
-.main-navigation {
-  background: rgba(255, 102, 102, 0);
-  border: 2px solid #e6f2ff;
-  color: #333333;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  list-style: none;
-  margin-top: -10px;
-  min-height: 5em;
-  position: fixed;
-  right: 0;
-  top: 7em;
-  transition: background 3.2s ease;
-  width: 100%;
-  z-index: 99; }
-  @media screen and (min-width: 750px) {
-    .main-navigation {
-      width: 50%; } }
-  @media screen and (min-width: 1050px) {
-    .main-navigation {
-      width: 33.3%; } }
-  .main-navigation a {
-    color: #333;
-    margin: 0 auto;
-    padding: 0 10px; }
-    .main-navigation a:hover {
-      text-decoration: underline; }
-
 .add-color {
   background: #ff6666; }
 
 .menu-main-menu-container {
   margin: 0 auto; }
 
-.menu-item-has-children {
-  position: relative;
-  transition: all 1s ease; }
-  .menu-item-has-children .sub-menu {
-    background: #333;
-    border: 2px solid #e6f2ff;
-    color: #333333;
-    display: flex;
-    justify-content: center;
-    font-size: 1rem;
-    flex-direction: row;
-    list-style: none;
-    margin-top: -2em;
-    min-height: 5em;
-    opacity: 0;
-    position: fixed;
-    line-height: 5em;
-    right: 0;
-    top: 7em;
-    width: 100%;
-    z-index: 99; }
-    @media screen and (min-width: 750px) {
-      .menu-item-has-children .sub-menu {
-        width: 50%; } }
-    @media screen and (min-width: 1050px) {
-      .menu-item-has-children .sub-menu {
-        width: 33.33%; } }
-    .menu-item-has-children .sub-menu a {
-      color: #fff; }
-    .menu-item-has-children .sub-menu li {
-      font-size: 1rem; }
-
-@media screen and (min-width: 800px) {
-  .menu-item-has-children:hover {
-    padding-bottom: 0; } }
-.menu-item-has-children:hover .sub-menu {
-  transition: all 3s ease;
-  justify-content: center;
-  margin-top: 4em;
-  max-height: 25em;
-  min-height: 5em;
-  opacity: 1;
-  z-index: -1; }
-
-#show-nav {
-  background: inherit;
-  color: #333;
-  max-width: 70px;
-  padding: 30px 10px 20px;
-  text-align: center;
-  transition: background 2.8s, max-width 0.4s ease;
-  margin: 0 0 0 10px;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 100; }
-  #show-nav :active {
-    /* Safari */
-    -webkit-transform: rotate(-20deg);
-    /* Firefox */
-    -moz-transform: rotate(-20deg);
-    /* IE */
-    -ms-transform: rotate(-20deg);
-    /* Opera */
-    -o-transform: rotate(-20deg); }
-  #show-nav.active {
-    background: #333;
-    border: 2px solid #e6f2ff;
-    color: #fff;
-    /* Safari */
-    -webkit-transform: rotate(-20deg);
-    /* Firefox */
-    -moz-transform: rotate(-20deg);
-    /* IE */
-    -ms-transform: rotate(-20deg);
-    /* Opera */
-    -o-transform: rotate(-20deg); }
-  #show-nav:hover {
-    max-width: 80px; }
-
 img.homepage_image {
   height: auto;
   width: 100%;
   max-height: calc(100vh - 90px); }
-
-/******************************************
-Design Options Blocks
-******************************************/
-#blocks {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative; }
-  #blocks div {
-    /* Affects positioning of template blocks */
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 1em auto 0;
-    max-width: 426px;
-    position: relative; }
-    @media screen and (min-width: 750px) {
-      #blocks div {
-        max-width: 50%; } }
-    @media screen and (min-width: 1050px) {
-      #blocks div {
-        max-width: 33.33%; } }
-    #blocks div img {
-      height: 16em; }
-  #blocks div div {
-    /* Affects positioning of hidden overlays */
-    margin: -17.25em auto 0;
-    max-width: 426px;
-    position: relative; }
-    @media screen and (min-width: 750px) {
-      #blocks div div {
-        max-width: 100%; } }
-
-#template-block,
-#wordpress-block,
-#custom-work-block {
-  width: 100%; }
-
-/******************************************
-Hidden Design Block Styles
-******************************************/
-#wordpress-hidden,
-#scratch-hidden,
-#template-hidden {
-  color: white;
-  font-size: 1.1em;
-  margin: 0 auto;
-  padding-top: 2em;
-  text-align: center;
-  width: 320px; }
-
-.design-info-maintain,
-.design-info-word,
-.design-info-scratch {
-  height: 16em;
-  background: #668cff;
-  position: absolute;
-  font-family: 'Crimson Text', serif;
-  opacity: 0.9; }
-
-#hidden-scratch-photo-center {
-  width: 36%;
-  display: inline;
-  margin-right: 0;
-  margin-left: 360px;
-  margin-top: 3px;
-  position: relative;
-  border-width: 1px;
-  border-style: solid;
-  border-color: grey;
-  border-radius: 0; }
-
-/* Info Buttons Hide/Show */
-.hide-info-button-scratch,
-.hide-info-button-template,
-.hide-info-button-word {
-  bottom: 1em;
-  color: white;
-  right: 5em;
-  padding: 11px 16px;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  position: absolute; }
-  .hide-info-button-scratch:hover,
-  .hide-info-button-template:hover,
-  .hide-info-button-word:hover {
-    color: #333;
-    background: #e6f2ff;
-    padding: 11px 16px;
-    border: 2px solid #e6f2ff; }
-
-.more-info-button-template,
-.more-info-button-scratch,
-.more-info-button-word {
-  bottom: 1em;
-  color: white;
-  left: 5em;
-  padding: 11px 10px;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  position: absolute; }
-  .more-info-button-template:hover,
-  .more-info-button-scratch:hover,
-  .more-info-button-word:hover {
-    color: #333;
-    background: #e6f2ff;
-    padding: 11px 10px;
-    border: 2px solid #e6f2ff; }
 
 /******************************************
 Page Tempalte Styles
@@ -417,25 +220,6 @@ Contact Styles
   max-width: 50rem; }
 
 /******************************************
-Footer Styles
-******************************************/
-#foot {
-  color: #ffffff;
-  background: #333;
-  height: 70px;
-  margin-top: 30px;
-  padding-top: 35px;
-  text-align: center; }
-  #foot a {
-    text-align: center;
-    color: #ffffff;
-    float: none;
-    padding-right: 0; }
-
-.design-labels {
-  text-align: center; }
-
-/******************************************
 Design Option Page Styles
 ******************************************/
 .design-paragraph-headers {
@@ -458,15 +242,236 @@ Blog Styles
   margin: 0 auto 2em;
   width: 95%; }
 
+/******************************************
+Header Styles
+******************************************/
 #top-header {
   display: block;
   height: 90px;
   padding-bottom: 0;
-  position: absolute;
   top: 0;
   width: 100%; }
   #top-header img {
     max-height: 100px;
     max-width: 307px; }
+
+/******************************************
+Navigation Styles
+******************************************/
+.main-navigation {
+  background: rgba(255, 102, 102, 0);
+  border: 2px solid #e6f2ff;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+  margin-top: -10px;
+  min-height: 5em;
+  position: fixed;
+  right: 0;
+  top: 7em;
+  transition: background 3.2s ease;
+  width: 100%;
+  z-index: 99; }
+  @media screen and (min-width: 750px) {
+    .main-navigation {
+      width: 50%; } }
+  @media screen and (min-width: 1050px) {
+    .main-navigation {
+      width: 33.3%; } }
+  .main-navigation a {
+    color: #333;
+    margin: 0 auto;
+    padding: 0 10px; }
+    .main-navigation a:hover {
+      text-decoration: underline; }
+
+.menu-item-has-children {
+  position: relative;
+  transition: all 1s ease; }
+  .menu-item-has-children .sub-menu {
+    background: #333;
+    border: 2px solid #e6f2ff;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    flex-direction: row;
+    list-style: none;
+    margin-top: -2em;
+    min-height: 5em;
+    opacity: 0;
+    position: fixed;
+    line-height: 5em;
+    right: 0;
+    top: 7em;
+    width: 100%;
+    z-index: 99; }
+    @media screen and (min-width: 750px) {
+      .menu-item-has-children .sub-menu {
+        width: 50%; } }
+    @media screen and (min-width: 1050px) {
+      .menu-item-has-children .sub-menu {
+        width: 33.33%; } }
+    .menu-item-has-children .sub-menu a {
+      color: #fff; }
+    .menu-item-has-children .sub-menu li {
+      font-size: 1rem; }
+
+@media screen and (min-width: 800px) {
+  .menu-item-has-children:hover {
+    padding-bottom: 0; } }
+.menu-item-has-children:hover .sub-menu {
+  transition: all 3s ease;
+  justify-content: center;
+  margin-top: 4em;
+  max-height: 25em;
+  min-height: 5em;
+  opacity: 1;
+  z-index: -1; }
+
+#show-nav {
+  background: inherit;
+  color: #333;
+  max-width: 70px;
+  padding: 30px 10px 20px;
+  text-align: center;
+  transition: background 2.8s, max-width 0.4s ease;
+  margin: 0 0 0 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100; }
+  #show-nav :active {
+    /* Safari */
+    -webkit-transform: rotate(-20deg);
+    /* Firefox */
+    -moz-transform: rotate(-20deg);
+    /* IE */
+    -ms-transform: rotate(-20deg);
+    /* Opera */
+    -o-transform: rotate(-20deg); }
+  #show-nav.active {
+    background: #333;
+    border: 2px solid #e6f2ff;
+    color: #fff;
+    /* Safari */
+    -webkit-transform: rotate(-20deg);
+    /* Firefox */
+    -moz-transform: rotate(-20deg);
+    /* IE */
+    -ms-transform: rotate(-20deg);
+    /* Opera */
+    -o-transform: rotate(-20deg); }
+  #show-nav:hover {
+    max-width: 80px; }
+
+/******************************************
+Design Options Blocks
+******************************************/
+#blocks {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative; }
+  #blocks div {
+    /* Affects positioning of template blocks */
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1em auto 0;
+    max-width: 426px;
+    position: relative; }
+    @media screen and (min-width: 750px) {
+      #blocks div {
+        max-width: 50%; } }
+    @media screen and (min-width: 1050px) {
+      #blocks div {
+        max-width: 33.33%; } }
+    #blocks div img {
+      height: 16em; }
+  #blocks div div {
+    /* Affects positioning of hidden overlays */
+    margin: -17.25em auto 0;
+    max-width: 426px;
+    position: relative; }
+    @media screen and (min-width: 750px) {
+      #blocks div div {
+        max-width: 100%; } }
+
+#template-block,
+#wordpress-block,
+#custom-work-block {
+  width: 100%; }
+
+/******************************************
+Hidden Design Block Styles
+******************************************/
+#wordpress-hidden,
+#scratch-hidden,
+#template-hidden {
+  color: white;
+  font-size: 1.1em;
+  margin: 0 auto;
+  padding-top: 2em;
+  text-align: center;
+  width: 320px; }
+
+.design-info-maintain,
+.design-info-word,
+.design-info-scratch {
+  height: 16em;
+  background: #668cff;
+  position: absolute;
+  font-family: 'Crimson Text', serif;
+  opacity: 0.9; }
+
+#hidden-scratch-photo-center {
+  width: 36%;
+  display: inline;
+  margin-right: 0;
+  margin-left: 360px;
+  margin-top: 3px;
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 0; }
+
+/* Info Buttons Hide/Show */
+.hide-info-button-scratch,
+.hide-info-button-template,
+.hide-info-button-word {
+  bottom: 1em;
+  color: white;
+  right: 5em;
+  padding: 11px 16px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  position: absolute; }
+  .hide-info-button-scratch:hover,
+  .hide-info-button-template:hover,
+  .hide-info-button-word:hover {
+    color: #333;
+    background: #e6f2ff;
+    padding: 11px 16px;
+    border: 2px solid #e6f2ff; }
+
+.more-info-button-template,
+.more-info-button-scratch,
+.more-info-button-word {
+  bottom: 1em;
+  color: white;
+  left: 5em;
+  padding: 11px 10px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  position: absolute; }
+  .more-info-button-template:hover,
+  .more-info-button-scratch:hover,
+  .more-info-button-word:hover {
+    color: #333;
+    background: #e6f2ff;
+    padding: 11px 10px;
+    border: 2px solid #e6f2ff; }
 
 /*# sourceMappingURL=style.css.map */
