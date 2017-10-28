@@ -488,7 +488,14 @@ Hidden Design Block Styles
   .one_third.content-column img {
     width: 98%; }
 
-.front-page .one_third.content-column:nth-of-type(1):after {
+.page-template-front-page .front-page .one_third.content-column:nth-of-type(odd) h1, .page-template-front-page .front-page .one_third.content-column:nth-of-type(odd) h2, .page-template-front-page .front-page .one_third.content-column:nth-of-type(odd) h3, .page-template-front-page .front-page .one_third.content-column:nth-of-type(odd) h4 {
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; }
+.page-template-front-page .front-page .one_third.content-column:nth-of-type(odd):after {
   background: black;
   content: '';
   display: block;
@@ -501,21 +508,15 @@ Hidden Design Block Styles
   top: 0em;
   text-align: center;
   z-index: 1; }
-.front-page .one_third.content-column:nth-of-type(2):after {
-  background: black;
-  content: '';
-  display: block;
-  height: 98%;
-  width: 98%;
-  margin: 0 auto;
-  opacity: .7;
+.page-template-front-page .front-page .one_third.content-column:nth-of-type(even) h1, .page-template-front-page .front-page .one_third.content-column:nth-of-type(even) h2, .page-template-front-page .front-page .one_third.content-column:nth-of-type(even) h3, .page-template-front-page .front-page .one_third.content-column:nth-of-type(even) h4 {
+  color: #ffffff;
   position: absolute;
-  left: 1%;
-  top: 0em;
-  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1; }
-.front-page .one_third.content-column:nth-of-type(3):after {
-  background: black;
+.page-template-front-page .front-page .one_third.content-column:nth-of-type(even):after {
+  background: #e6f2ff;
   content: '';
   display: block;
   height: 98%;
