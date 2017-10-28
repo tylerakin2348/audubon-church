@@ -88,9 +88,6 @@ Page Tempalte Styles
   min-height: 100%;
   text-align: left; }
 
-.page {
-  width: 90vw; }
-
 .blog-page {
   margin-top: 10rem; }
   .blog-page .container__inner {
@@ -283,10 +280,8 @@ Navigation Styles
       float: none;
       text-align: center;
       padding: 4em 0; }
-      .main-navigation.open .menu > ul > li a {
-        color: #ffffff; }
   .main-navigation a {
-    color: #333;
+    color: #ffffff;
     margin: 0 auto;
     padding: 0 10px; }
     .main-navigation a:hover {
@@ -481,6 +476,7 @@ Hidden Design Block Styles
 
 .one_third.content-column {
   text-align: center;
+  position: relative;
   width: 100%; }
   @media screen and (min-width: 1050px) {
     .one_third.content-column {
@@ -488,8 +484,62 @@ Hidden Design Block Styles
   .one_third.content-column img {
     width: 98%; }
 
-.front-page .wp-post-image {
+.front-page .one_third.content-column:nth-of-type(1):after {
+  background: black;
+  content: '';
+  display: block;
+  height: 98%;
+  width: 98%;
+  margin: 0 auto;
+  opacity: .7;
+  position: absolute;
+  left: 1%;
+  top: 0em;
+  text-align: center;
+  z-index: 1; }
+.front-page .one_third.content-column:nth-of-type(2):after {
+  background: black;
+  content: '';
+  display: block;
+  height: 98%;
+  width: 98%;
+  margin: 0 auto;
+  opacity: .7;
+  position: absolute;
+  left: 1%;
+  top: 0em;
+  text-align: center;
+  z-index: 1; }
+.front-page .one_third.content-column:nth-of-type(3):after {
+  background: black;
+  content: '';
+  display: block;
+  height: 98%;
+  width: 98%;
+  margin: 0 auto;
+  opacity: .7;
+  position: absolute;
+  left: 1%;
+  top: 0em;
+  text-align: center;
+  z-index: 1; }
+
+.full_width.content-column {
+  padding: 4em 0em;
+  text-align: center; }
+
+.page-template-front-page h1.site-title a {
+  color: #ffffff; }
+.page-template-front-page .header-image .wp-post-image {
   max-height: none;
   height: 90vh; }
+.page-template-front-page .header-image:after {
+  content: url(/audubon-church/wp-content/themes/audubon-church/assets/icons/achurchreborn.svg);
+  height: auto;
+  width: 40em;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=style.css.map */

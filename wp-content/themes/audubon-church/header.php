@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,700" rel="stylesheet" type="text/css">
 <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
   <header id="top-header">
 
     <!-- logo code written by Kirk Wight of Automatic : Thanks Kirk :) -->

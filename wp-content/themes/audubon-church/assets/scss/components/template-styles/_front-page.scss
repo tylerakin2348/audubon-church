@@ -1,6 +1,23 @@
-.front-page {
-    .wp-post-image {
-        max-height: none;
-        height: 90vh;
+.page-template-front-page {
+    h1.site-title {
+        a {
+            color: $white;
+        }
+    }
+    .header-image {
+        .wp-post-image {
+            max-height: none;
+            height: 90vh;
+
+        }
+        &:after {
+            content: url(/audubon-church/wp-content/themes/audubon-church/assets/icons/achurchreborn.svg);
+            height: auto;
+            width: 40em;
+            position: absolute;
+                left: 50%;
+                top: 45%;
+            transform: translate(-50%,-50%);
+        }
     }
 }

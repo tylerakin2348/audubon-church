@@ -32,15 +32,12 @@ position: relative;
                 float: none;
                 text-align: center;
                 padding: 4em 0;
-                a {
-                    color: $white;
-                }
             }
         }
     }
   }
   a {
-    color: #333;
+    color: $white;
     margin: 0 auto;
     padding: 0 10px;
     &:hover {
