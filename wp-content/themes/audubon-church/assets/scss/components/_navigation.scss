@@ -6,7 +6,7 @@ Navigation Styles
 
   display: none;
 position: relative;
-
+z-index: 1;
   @media screen and (min-width: 800px) {
       display: inline-block;
     // width: 50%;
@@ -109,13 +109,21 @@ position: relative;
     position: absolute;
     top: 1em;
     right: 1.5em;
+    z-index: 1;
     @media screen and (min-width: 800px) {
         display: none;
     }
+    &:hover {
+        span.hamburger-bar {
+            background: darken($white, 15%);
+            transition: all .5s;
+        }
+    }
+
 }
 
 span.hamburger-bar {
-    background: #720101;
+    background: $white;
     display: block;
     height: 4px;
     width: 2em;
@@ -123,7 +131,6 @@ span.hamburger-bar {
     transition: all .5s;
 
     &.open {
-        background: $white;
         transform: rotate(90deg);
         transition: all .5s;
         &:first-of-type {

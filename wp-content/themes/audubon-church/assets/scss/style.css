@@ -260,7 +260,8 @@ Navigation Styles
 ******************************************/
 .main-navigation {
   display: none;
-  position: relative; }
+  position: relative;
+  z-index: 1; }
   @media screen and (min-width: 800px) {
     .main-navigation {
       display: inline-block; } }
@@ -341,20 +342,23 @@ Navigation Styles
   display: inline-block;
   position: absolute;
   top: 1em;
-  right: 1.5em; }
+  right: 1.5em;
+  z-index: 1; }
   @media screen and (min-width: 800px) {
     .hamburger-icon {
       display: none; } }
+  .hamburger-icon:hover span.hamburger-bar {
+    background: #d9d9d9;
+    transition: all .5s; }
 
 span.hamburger-bar {
-  background: #720101;
+  background: #ffffff;
   display: block;
   height: 4px;
   width: 2em;
   margin: .5em auto;
   transition: all .5s; }
   span.hamburger-bar.open {
-    background: #ffffff;
     transform: rotate(90deg);
     transition: all .5s; }
     span.hamburger-bar.open:first-of-type {
