@@ -116,7 +116,7 @@ About Styles
   width: 100%; }
   .about img {
     padding-bottom: 3em; }
-    @media screen and (min-width: 750px) {
+    @media (min-width: 37.5em) {
       .about img {
         padding-bottom: 0; } }
   .about .svg {
@@ -246,40 +246,45 @@ Blog Styles
 Header Styles
 ******************************************/
 #top-header {
-  display: block;
-  height: 90px;
-  padding-bottom: 0;
-  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
   width: 100%; }
   #top-header img {
     max-height: 100px;
     max-width: 307px; }
 
+hgroup {
+  display: inline-block; }
+
 /******************************************
 Navigation Styles
 ******************************************/
 .main-navigation {
-  background: rgba(255, 102, 102, 0);
-  border: 2px solid #e6f2ff;
-  color: #333333;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  list-style: none;
-  margin-top: -10px;
-  min-height: 5em;
-  position: fixed;
-  right: 0;
-  top: 7em;
-  transition: background 3.2s ease;
-  width: 100%;
-  z-index: 99; }
-  @media screen and (min-width: 750px) {
+  display: none;
+  position: relative; }
+  @media screen and (min-width: 800px) {
     .main-navigation {
-      width: 50%; } }
-  @media screen and (min-width: 1050px) {
-    .main-navigation {
-      width: 33.3%; } }
+      display: inline-block; } }
+  .main-navigation.open {
+    display: flex;
+    height: 100vh;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    background: #720101;
+    opacity: .95; }
+    .main-navigation.open .menu > ul > li {
+      float: none;
+      text-align: center;
+      padding: 4em 0; }
+      .main-navigation.open .menu > ul > li a {
+        color: #ffffff; }
   .main-navigation a {
     color: #333;
     margin: 0 auto;
@@ -331,41 +336,41 @@ Navigation Styles
   opacity: 1;
   z-index: -1; }
 
-#show-nav {
-  background: inherit;
-  color: #333;
-  max-width: 70px;
-  padding: 30px 10px 20px;
-  text-align: center;
-  transition: background 2.8s, max-width 0.4s ease;
-  margin: 0 0 0 10px;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 100; }
-  #show-nav :active {
-    /* Safari */
-    -webkit-transform: rotate(-20deg);
-    /* Firefox */
-    -moz-transform: rotate(-20deg);
-    /* IE */
-    -ms-transform: rotate(-20deg);
-    /* Opera */
-    -o-transform: rotate(-20deg); }
-  #show-nav.active {
-    background: #333;
-    border: 2px solid #e6f2ff;
-    color: #fff;
-    /* Safari */
-    -webkit-transform: rotate(-20deg);
-    /* Firefox */
-    -moz-transform: rotate(-20deg);
-    /* IE */
-    -ms-transform: rotate(-20deg);
-    /* Opera */
-    -o-transform: rotate(-20deg); }
-  #show-nav:hover {
-    max-width: 80px; }
+.hamburger-icon-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.hamburger-icon {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 1em;
+  right: 1.5em; }
+  @media screen and (min-width: 800px) {
+    .hamburger-icon {
+      display: none; } }
+
+span.hamburger-bar {
+  background: #720101;
+  display: block;
+  height: 4px;
+  width: 2em;
+  margin: .5em auto;
+  transition: all .5s; }
+  span.hamburger-bar.open {
+    background: #ffffff;
+    transform: rotate(90deg);
+    transition: all .5s; }
+    span.hamburger-bar.open:first-of-type {
+      width: 1.5em; }
+  span.hamburger-bar.crossbar {
+    transform: rotate(0deg);
+    transition: all .5s;
+    transform: translate(0%, 0%); }
+  span.hamburger-bar.crossbar.open {
+    transition: all .5s;
+    transform: translate(0%, -60%); }
 
 /******************************************
 Design Options Blocks
@@ -473,5 +478,18 @@ Hidden Design Block Styles
     background: #e6f2ff;
     padding: 11px 10px;
     border: 2px solid #e6f2ff; }
+
+.one_third.content-column {
+  text-align: center;
+  width: 100%; }
+  @media screen and (min-width: 1050px) {
+    .one_third.content-column {
+      width: 33.3%; } }
+  .one_third.content-column img {
+    width: 98%; }
+
+.front-page .wp-post-image {
+  max-height: none;
+  height: 90vh; }
 
 /*# sourceMappingURL=style.css.map */

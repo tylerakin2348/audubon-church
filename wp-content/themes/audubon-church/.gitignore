@@ -1,5 +1,9 @@
 # Compiled source #
 ###################
-*jpg
-*png
+*.jpg
+*.png
+*.txt
 *.htaccess
+*.map
+*.wp-includes
+*.wp-admin

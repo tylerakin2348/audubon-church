@@ -3,26 +3,41 @@ Navigation Styles
 ******************************************/
 
 .main-navigation {
-  background: rgba(255, 102, 102, 0);
-  border: 2px solid rgb(230, 242, 255);
-  color: rgb(51, 51, 51);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  list-style: none;
-  margin-top: -10px;
-  min-height: 5em;
-  position: fixed;
-  right: 0;
-  top: 7em;
-  transition: background 3.2s ease;
-  width: 100%;
-  z-index: 99;
-  @media screen and (min-width: 750px) {
-    width: 50%;
+
+  display: none;
+position: relative;
+
+  @media screen and (min-width: 800px) {
+      display: inline-block;
+    // width: 50%;
   }
-  @media screen and (min-width: 1050px) {
-    width: 33.3%;
+  @include breakpoint(desktop) {
+    //   width: 33.3%;
+  }
+  &.open {
+      display: flex;
+      height: 100vh;
+      position: absolute;
+      width: 100vw;
+      left: 0;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      background: #720101;
+      opacity: .95;
+    .menu {
+        & > ul {
+            & > li {
+                float: none;
+                text-align: center;
+                padding: 4em 0;
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
   }
   a {
     color: #333;
@@ -84,43 +99,48 @@ Navigation Styles
       z-index: -1;
     }
   }
-#show-nav {
-  background: inherit;
-  color: #333;
-  max-width: 70px;
-  padding: 30px 10px 20px;
-  text-align: center;
-  transition: background 2.8s, max-width 0.4s ease;
-  margin: 0 0 0 10px;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 100;
-  :active {
-      /* Safari */
-      -webkit-transform: rotate(-20deg);
-      /* Firefox */
-      -moz-transform: rotate(-20deg);
-      /* IE */
-      -ms-transform: rotate(-20deg);
-      /* Opera */
-      -o-transform: rotate(-20deg);
-  }
-  &.active {
-      background: #333;
-      border: 2px solid rgb(230, 242, 255);
-      color: #fff;
-      /* Safari */
-      -webkit-transform: rotate(-20deg);
-      /* Firefox */
-      -moz-transform: rotate(-20deg);
-      /* IE */
-      -ms-transform: rotate(-20deg);
-      /* Opera */
-      -o-transform: rotate(-20deg);
-  }
-  &:hover {
-      max-width: 80px;
-  }
+
+.hamburger-icon-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.hamburger-icon {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 1em;
+    right: 1.5em;
+    @media screen and (min-width: 800px) {
+        display: none;
+    }
+}
+
+span.hamburger-bar {
+    background: #720101;
+    display: block;
+    height: 4px;
+    width: 2em;
+    margin: .5em auto;
+    transition: all .5s;
+
+    &.open {
+        background: $white;
+        transform: rotate(90deg);
+        transition: all .5s;
+        &:first-of-type {
+            width: 1.5em;
+        }
+    }
+    &.crossbar {
+        transform: rotate(0deg);
+        transition: all .5s;
+        transform: translate(0%,0%);
+    }
+    &.crossbar.open {
+        transition: all .5s;
+        transform: translate(0%,-60%);
+    }
 
 }

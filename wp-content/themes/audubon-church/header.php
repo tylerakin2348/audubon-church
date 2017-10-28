@@ -19,13 +19,16 @@
         <hgroup>
             <h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
             <h2 class='site-description'><?php bloginfo( 'description' ); ?></h2>
+
         </hgroup>
     <?php endif; ?>
 
-    <a href="" onclick="return false;" id="show-nav">Show Navigation</a>
     <nav class="main-navigation">
-
       <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
     </nav>
-
   </header>
+  <div class="hamburger-icon">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar crossbar"></span>
+      <span class="hamburger-bar"></span>
+  </div>

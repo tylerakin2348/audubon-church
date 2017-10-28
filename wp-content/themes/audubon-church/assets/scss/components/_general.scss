@@ -105,7 +105,8 @@ About Styles
     width: 100%;
     img {
         padding-bottom: 3em;
-        @media screen and (min-width: 750px) {
+
+        @include breakpoint(mobile) {
             padding-bottom: 0;
         }
     }

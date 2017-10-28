@@ -5,6 +5,7 @@
 
 // Foundational styles
 @import "vars";
+@import "mixins";
 
 
 // Components
@@ -15,3 +16,8 @@
 
 // Components/layouts
 @import "components/layouts/three-column";
+@import "components/layouts/content-columns";
+
+
+// Components/template-styles
+@import "components/template-styles/front-page";
