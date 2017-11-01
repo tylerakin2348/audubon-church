@@ -27,7 +27,7 @@ Footer Styles
 General Styles
 ******************************************/
 body {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
   overflow-x: hidden; }
 
 img {
@@ -60,6 +60,9 @@ h2 {
   display: block;
   font-size: 1.5em; }
 
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 1.5rem; }
+
 /******************************************
 Heading Styles
 ******************************************/
@@ -78,187 +81,35 @@ img.homepage_image {
   max-height: calc(100vh - 90px); }
 
 /******************************************
-Page Tempalte Styles
-******************************************/
-.page,
-.blog-page,
-.front-page,
-.full-width-page {
-  margin: 0 auto;
-  min-height: 100%;
-  text-align: left; }
-
-.blog-page {
-  margin-top: 10rem; }
-  .blog-page .container__inner {
-    margin: 0 auto;
-    width: 90vw; }
-
-.full-width-page {
-  width: 90vw; }
-
-/******************************************
-About Styles
-******************************************/
-.about {
-  background: #333;
-  color: #fff;
-  display: none;
-  height: auto;
-  margin: 0 auto;
-  padding: 5em 0;
-  position: fixed;
-  top: 25%;
-  text-align: center;
-  width: 100%; }
-  .about img {
-    padding-bottom: 3em; }
-    @media (min-width: 37.5em) {
-      .about img {
-        padding-bottom: 0; } }
-  .about .svg {
-    cursor: pointer;
-    position: absolute;
-    right: 2rem;
-    top: 2rem;
-    width: 2rem; }
-  .about p {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 30%;
-    margin: auto; }
-
-.shadow-box {
-  transition: all 2.8s ease;
-  display: flex;
-  flex-direction: column; }
-  @media screen and (min-width: 750px) {
-    .shadow-box {
-      flex-direction: row; } }
-
-#tyler-about-pic {
-  border-radius: 100px;
-  height: 100%;
-  margin: 0 auto;
-  width: 350px; }
-
-.about-paragraph {
-  display: inline;
-  font-size: 1.1em;
-  line-height: 1.4em;
-  margin: 50px auto 0;
-  max-width: 500px;
-  text-align: center; }
-  @media screen and (min-width: 750px) {
-    .about-paragraph {
-      margin-top: 5em;
-      text-align: left; } }
-  @media screen and (min-width: 850px) {
-    .about-paragraph {
-      margin-top: 3em;
-      max-width: 40%;
-      text-align: left; } }
-
-/******************************************
-Contact Styles
-******************************************/
-.contact {
-  background: #333;
-  color: #fff;
-  display: none;
-  height: auto;
-  margin: 0 auto;
-  padding: 5em 0;
-  position: fixed;
-  top: 25%;
-  text-align: center;
-  width: 100%; }
-  .contact .svg {
-    cursor: pointer;
-    position: absolute;
-    right: 2rem;
-    top: 2rem;
-    width: 2rem; }
-
-.shadow-box {
-  transition: all 2.8s ease;
-  display: flex;
-  flex-direction: column; }
-
-.contact-paragraph {
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 2rem;
-  padding-bottom: 25px;
-  font-size: 1.1em;
-  line-height: 1.2em;
-  max-width: 45rem; }
-  .contact-paragraph a {
-    background: #333;
-    box-shadow: 3px 0 2px 1px rgba(0, 0, 0, 0.5);
-    display: block;
-    padding: 1em;
-    margin: 0 auto;
-    width: 10em; }
-    .contact-paragraph a:hover {
-      background: #ff6666;
-      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-      color: #333; }
-
-.contact-info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 0 auto;
-  width: 75vw;
-  max-width: 50rem; }
-
-/******************************************
-Design Option Page Styles
-******************************************/
-.design-paragraph-headers {
-  font-size: 1.3em;
-  margin: 2em auto 0;
-  text-align: center;
-  width: 90%; }
-
-.design-paragraphs {
-  line-height: 1.5em;
-  margin: 0.5em auto 0;
-  text-align: justify;
-  text-indent: 25px;
-  width: 90%; }
-
-/******************************************
-Blog Styles
-******************************************/
-.blog-post {
-  margin: 0 auto 2em;
-  width: 95%; }
-
-/******************************************
 Header Styles
 ******************************************/
 #top-header {
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
+  position: relative;
   width: 100%; }
   #top-header img {
     max-height: 100px;
     max-width: 307px; }
+  #top-header h1.site-title a {
+    color: #ffffff;
+    font-family: 'Neucha', cursive; }
 
 hgroup {
-  display: inline-block; }
+  display: inline-block;
+  padding-left: 1.5rem; }
+
+.page-template-front-page #top-header {
+  background: none;
+  position: absolute; }
 
 /******************************************
 Navigation Styles
 ******************************************/
 .main-navigation {
+  padding-right: 1.5rem;
   display: none;
   position: relative;
   z-index: 1; }
@@ -266,23 +117,31 @@ Navigation Styles
     .main-navigation {
       display: inline-block; } }
   .main-navigation.open {
+    background: #720101;
     display: flex;
-    height: 100vh;
-    position: absolute;
-    width: 100vw;
-    left: 0;
-    text-align: center;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+    position: fixed;
+    left: 0;
     top: 0;
-    background: #720101;
-    opacity: .95; }
-    .main-navigation.open .menu > ul > li {
-      float: none;
-      text-align: center;
-      padding: 4em 0; }
+    text-align: center;
+    z-index: 2; }
+    .main-navigation.open ul.menu {
+      display: flex;
+      flex-direction: column; }
+      @media (min-width: 37.5em) {
+        .main-navigation.open ul.menu {
+          flex-direction: row; } }
+      .main-navigation.open ul.menu > li {
+        float: none;
+        text-align: center;
+        padding: 1.5em 0; }
   .main-navigation a {
     color: #ffffff;
+    font-family: sans-serif;
     margin: 0 auto;
     padding: 0 10px; }
     .main-navigation a:hover {
@@ -343,13 +202,15 @@ Navigation Styles
   position: absolute;
   top: 1em;
   right: 1.5em;
-  z-index: 1; }
+  z-index: 2; }
   @media screen and (min-width: 800px) {
     .hamburger-icon {
       display: none; } }
   .hamburger-icon:hover span.hamburger-bar {
     background: #d9d9d9;
     transition: all .5s; }
+  .hamburger-icon.open {
+    position: fixed; }
 
 span.hamburger-bar {
   background: #ffffff;
@@ -482,7 +343,7 @@ Hidden Design Block Styles
   text-align: center;
   position: relative;
   width: 100%; }
-  @media screen and (min-width: 1050px) {
+  @media (min-width: 37.5em) {
     .one_third.content-column {
       width: 33.3%; } }
   .one_third.content-column img {
@@ -530,21 +391,37 @@ Hidden Design Block Styles
   z-index: 1; }
 
 .full_width.content-column {
+  background: #D9D9D9;
   padding: 4em 0em;
   text-align: center; }
+  .full_width.content-column p {
+    font-weight: 300;
+    line-height: 1.5em;
+    font-size: 1.5em; }
+  .full_width.content-column strong p {
+    color: #91181B; }
 
-.page-template-front-page h1.site-title a {
-  color: #ffffff; }
 .page-template-front-page .header-image .wp-post-image {
   max-height: none;
   height: 90vh; }
 .page-template-front-page .header-image:after {
   content: url(/audubon-church/wp-content/themes/audubon-church/assets/icons/achurchreborn.svg);
   height: auto;
-  width: 40em;
+  width: 24em;
   position: absolute;
   left: 50%;
   top: 45%;
   transform: translate(-50%, -50%); }
+  @media (min-width: 37.5em) {
+    .page-template-front-page .header-image:after {
+      width: 40em; } }
+  @media (min-width: 70em) {
+    .page-template-front-page .header-image:after {
+      width: 40em; } }
+
+.page-template-fullwidth .full-width-page__container {
+  margin: 0 auto;
+  max-width: 60em;
+  padding: 0rem 1rem; }
 
 /*# sourceMappingURL=style.css.map */

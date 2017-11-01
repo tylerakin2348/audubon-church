@@ -1,9 +1,5 @@
 .page-template-front-page {
-    h1.site-title {
-        a {
-            color: $white;
-        }
-    }
+
     .header-image {
         .wp-post-image {
             max-height: none;
@@ -13,11 +9,18 @@
         &:after {
             content: url(/audubon-church/wp-content/themes/audubon-church/assets/icons/achurchreborn.svg);
             height: auto;
-            width: 40em;
+            width: 24em;
             position: absolute;
                 left: 50%;
                 top: 45%;
             transform: translate(-50%,-50%);
+
+            @include breakpoint(mobile) {
+                width: 40em;
+            }
+            @include breakpoint(desktop) {
+                width: 40em;
+            }
         }
     }
 }

@@ -3,10 +3,10 @@ Navigation Styles
 ******************************************/
 
 .main-navigation {
-
-  display: none;
-position: relative;
-z-index: 1;
+    padding-right: 1.5rem;
+    display: none;
+    position: relative;
+    z-index: 1;
   @media screen and (min-width: 800px) {
       display: inline-block;
     // width: 50%;
@@ -15,29 +15,34 @@ z-index: 1;
     //   width: 33.3%;
   }
   &.open {
-      display: flex;
-      height: 100vh;
-      position: absolute;
-      width: 100vw;
-      left: 0;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      top: 0;
-      background: #720101;
-      opacity: .95;
-    .menu {
-        & > ul {
+    background: #720101;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+    position: fixed;
+        left: 0;
+        top: 0;
+    text-align: center;
+    z-index: 2;
+     ul.menu {
+            display: flex;
+                flex-direction: column;
+            @include breakpoint(mobile) {
+                flex-direction: row;
+            }
             & > li {
                 float: none;
                 text-align: center;
-                padding: 4em 0;
+                padding: 1.5em 0;
             }
         }
-    }
   }
   a {
     color: $white;
+    font-family: sans-serif;
     margin: 0 auto;
     padding: 0 10px;
     &:hover {
@@ -109,7 +114,7 @@ z-index: 1;
     position: absolute;
     top: 1em;
     right: 1.5em;
-    z-index: 1;
+    z-index: 2;
     @media screen and (min-width: 800px) {
         display: none;
     }
@@ -119,7 +124,9 @@ z-index: 1;
             transition: all .5s;
         }
     }
-
+    &.open {
+        position: fixed;
+    }
 }
 
 span.hamburger-bar {

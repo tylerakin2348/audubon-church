@@ -3,10 +3,10 @@ $('#show-nav').click(function() {
 });
 
 $(".hamburger-icon").on('click',function(){
-  $('span.hamburger-bar').toggleClass('open');
-  $('.main-navigation').toggleClass('open');
+    $('.hamburger-icon').toggleClass('open');
+    $('span.hamburger-bar').toggleClass('open');
+    $('.main-navigation').toggleClass('open');
 });
-
 
 
 // // This code contains the hide/show functionality of the design options
