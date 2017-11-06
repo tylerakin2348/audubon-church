@@ -75,10 +75,16 @@ Heading Styles
 .menu-main-menu-container {
   margin: 0 auto; }
 
-img.homepage_image {
+.header-image {
+  max-height: calc(100vh - 90px);
   height: auto;
-  width: 100%;
-  max-height: calc(100vh - 90px); }
+  width: 100%; }
+  .header-image div.bg-image {
+    background-position: center center;
+    height: 608px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; }
 
 /******************************************
 Header Styles

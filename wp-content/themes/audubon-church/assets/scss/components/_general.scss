@@ -57,11 +57,18 @@ Heading Styles
 }
 
 
-img.homepage_image {
+.header-image {
+    max-height: calc(100vh - 90px);
     height: auto;
-    // max-height: 25rem;
     width: 100%;
-    // @media screen and (min-width: 1050px) {
-        max-height: calc(100vh - 90px);
-    // }
+
+
+    div.bg-image {
+        background-position: center center;
+        height: 608px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+
 }
