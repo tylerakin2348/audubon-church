@@ -16,14 +16,42 @@ $(window).resize(function(e){
     }
 });
 
-
-$("img").each(function(i, elem) {
+// This function adds the header image as a background image
+$(".header-image img").each(function(i, elem) {
   var img = $(elem);
   var div = $("<div />").css({
-    background: "url(" + img.attr("src") + ") no-repeat center",
+    background: "url(" + img.attr("src") + ")",
     width: img.width() + "px",
     height: img.height() + "px"
   });
+  // div.css('background-size', 'cover');
+  div.addClass('bg-image');
+  img.replaceWith(div);
+});
+
+
+// This function adds the images as background images for 1/3 class.
+$(".one_third img").each(function(i, elem) {
+  var img = $(elem);
+  var div = $("<div />").css({
+    background: "url(" + img.attr("src") + ")",
+    width: img.width() + "px",
+    height: img.height() + "px"
+  });
+  // div.css('background-size', 'cover');
+  div.addClass('bg-image');
+  img.replaceWith(div);
+});
+
+// This function adds the images as background images for 1/2 class.
+$(".one_half img").each(function(i, elem) {
+  var img = $(elem);
+  var div = $("<div />").css({
+    background: "url(" + img.attr("src") + ")",
+    width: img.width() + "px",
+    height: img.height() + "px"
+  });
+  // div.css('background-size', 'cover');
   div.addClass('bg-image');
   img.replaceWith(div);
 });

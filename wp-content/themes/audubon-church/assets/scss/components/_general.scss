@@ -64,11 +64,11 @@ Heading Styles
 
 
     div.bg-image {
-        background-position: center center;
-        height: 608px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
+        background-position: center center !important;
+        height: 90vh !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        width: 100% !important;
     }
 
 }

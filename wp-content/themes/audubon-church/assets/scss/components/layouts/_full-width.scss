@@ -1,13 +1,19 @@
 .full_width.content-column {
-        background: #D9D9D9;
+    background: #D9D9D9;
+    display: block;
+    float: none;
+    margin: 0em;
     padding: 4em 0em;
     text-align: center;
     p {
         font-weight: 300;
-line-height: 1.5em;
-font-size: 1.5em;
+        line-height: 1.5em;
+        font-size: 1.5em;
+        margin: 0 auto;
+        max-width: 60rem;
+        padding: 0em 1em
     }
-strong p {
-    color: #91181B;
-}
+    strong p {
+        color: #91181B;
+    }
 }
