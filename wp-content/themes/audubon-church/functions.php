@@ -34,3 +34,23 @@ function themeslug_theme_customizer( $wp_customize ) {
 add_action( 'customize_register', 'themeslug_theme_customizer' );
 
 add_theme_support( 'post-thumbnails' );
+
+
+// This function removes WP-injected p tags surrounding img elements.
+	// This function was found at http://micahjon.com/2016/removing-wrapping-p-paragraph-tags-around-images-wordpress/
+function gc_remove_p_tags_around_images($content)
+{
+	$contentWithFixedPTags =  preg_replace_callback('/<p>((?:.(?!p>))*?)(<a[^>]*>)?\s*(<img[^>]+>)(<\/a>)?(.*?)<\/p>/is', function($matches)
+	{
+		$image = $matches[2] . $matches[3] . $matches[4];
+		$content = trim( $matches[1] . $matches[5] );
+		if ($content) {
+			$content = '<p>'. $content .'</p>';
+		}
+		return $image . $content;
+	}, $content);
+
+	// On large strings, this regular expression fails to execute, returning NULL
+	return is_null($contentWithFixedPTags) ? $content : $contentWithFixedPTags;
+}
+add_filter('the_content', 'gc_remove_p_tags_around_images');

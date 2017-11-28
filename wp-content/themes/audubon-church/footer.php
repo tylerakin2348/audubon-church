@@ -1,11 +1,13 @@
 </div>
-<footer id="foot">
-  <p>
-    <a href="index.php" class="to-top">Back to Top</a>
-      <br />
-      <br />
-    &copy; <?php echo date("Y"); ?> Web Interest Site Design
-  </p>
+<footer id="foot" class="foot">
+    <div class="foot-content">
+        <p>
+          <a href="index.php" class="to-top">Back to Top</a>
+            <br />
+            <br />
+          &copy; <?php echo date("Y"); ?> Web Interest Site Design
+        </p>
+    </div>
 </footer>
 <script src="<?php bloginfo('template_directory');?>/assets/js/jquery.js"></script>
 <script src="<?php bloginfo('template_directory');?>/assets/js/main.js"></script>

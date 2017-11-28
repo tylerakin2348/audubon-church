@@ -19,14 +19,13 @@ $(window).resize(function(e){
 // This function adds the header image as a background image
 $(".header-image img").each(function(i, elem) {
   var img = $(elem);
-  var div = $("<div />").css({
+  var parentdiv = $(".header-content");
+  parentdiv.css({
     background: "url(" + img.attr("src") + ")",
     width: img.width() + "px",
     height: img.height() + "px"
   });
-  // div.css('background-size', 'cover');
-  div.addClass('bg-image');
-  img.replaceWith(div);
+  parentdiv.addClass('bg-image');
 });
 
 
@@ -54,4 +53,9 @@ $(".one_half img").each(function(i, elem) {
   // div.css('background-size', 'cover');
   div.addClass('bg-image');
   img.replaceWith(div);
+});
+
+$('.to-top').on('click', function() {
+    jQuery('html,body').animate({scrollTop:0},800);
+    return false;
 });

@@ -1,25 +1,66 @@
 .page-template-front-page {
 
-    .header-image {
-        .wp-post-image {
-            max-height: none;
+    .header-content {
+        background-position: center center;
+        background-size: cover;
             height: 90vh;
 
-        }
-        &:after {
-            content: url(/audubon-church/wp-content/themes/audubon-church/assets/icons/achurchreborn.svg);
+        &:before {
+            content: url(/audubon-church/wp-content/themes/audubon-church/assets/icons/thechurchataudubonpark.svg);
             height: auto;
             max-width: 40em;
             position: absolute;
                 left: 50%;
-                top: 45%;
+                top: 40%;
             transform: translate(-50%,-50%);
             width: 90vw;
-
+            z-index: 1;
             @include breakpoint(mobile) {
                 width: 68vw;
             }
         }
+        &:after {
+            background: $blackOverlay;
+            content:'';
+            height: 90vh;
+            width: 100%;
+            opacity: .5;
+            position: absolute;
+                left: 0%;
+                top: 0%;
+        }
     }
-    
+
+}
+
+
+.bg-image + a span,
+.bg-image + p a span {
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+  // background-image: url('empty.gif');
+}
+
+.church-info {
+    color: $white;
+    display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        font-family: 'Delius';
+    height: 100%;
+    z-index: 1;
+    &__time {
+        margin-bottom: 5em;
+        text-align: center;
+        z-index: 1;
+    }
+    &__location {
+        margin-bottom: 5em;
+        text-align: center;
+        z-index: 1;
+    }
 }

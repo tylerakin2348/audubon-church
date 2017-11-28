@@ -1,19 +1,19 @@
 /******************************************
 Footer Styles
 ******************************************/
-#foot {
-  color: $white;
-  background: #333;
-  height: 70px;
-  margin-top: 30px;
-  padding-top: 35px;
-  text-align: center;
-  a {
-      text-align: center;
-      color: $white;
-      float: none;
-      padding-right: 0;
-  }
+.foot {
+    background: #333;
+    color: $white;
+    font-family: 'delius';
+    text-align: center;
+    div.foot-content {
+        padding: 1em;
+        a {
+            color: $white;
+            padding-right: 0;
+            text-align: center;
+        }
+    }
 }
 
 .design-labels {

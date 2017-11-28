@@ -8,7 +8,6 @@ body {
 img {
   border-style: none;
   height: auto;
-  max-height: 25rem;
   max-width: 100%;
 }
 li {
@@ -26,7 +25,6 @@ ul {
 a {
   color: rgb(255, 102, 102);
   display: inline;
-  padding-right: 10px;
   text-decoration: none;
   &:hover {
     color: rgb(255, 12, 12);

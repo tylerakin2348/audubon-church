@@ -7,18 +7,17 @@
 /******************************************
 Footer Styles
 ******************************************/
-#foot {
-  color: #ffffff;
+.foot {
   background: #333;
-  height: 70px;
-  margin-top: 30px;
-  padding-top: 35px;
+  color: #ffffff;
+  font-family: 'delius';
   text-align: center; }
-  #foot a {
-    text-align: center;
-    color: #ffffff;
-    float: none;
-    padding-right: 0; }
+  .foot div.foot-content {
+    padding: 1em; }
+    .foot div.foot-content a {
+      color: #ffffff;
+      padding-right: 0;
+      text-align: center; }
 
 .design-labels {
   text-align: center; }
@@ -33,7 +32,6 @@ body {
 img {
   border-style: none;
   height: auto;
-  max-height: 25rem;
   max-width: 100%; }
 
 li {
@@ -51,7 +49,6 @@ ul {
 a {
   color: #ff6666;
   display: inline;
-  padding-right: 10px;
   text-decoration: none; }
   a:hover {
     color: #ff0c0c; }
@@ -109,7 +106,8 @@ hgroup {
 
 .page-template-front-page #top-header {
   background: none;
-  position: absolute; }
+  position: absolute;
+  z-index: 1; }
 
 /******************************************
 Navigation Styles
@@ -147,7 +145,7 @@ Navigation Styles
         padding: 1.5em 0; }
   .main-navigation a {
     color: #ffffff;
-    font-family: sans-serif;
+    font-family: 'Delius';
     margin: 0 auto;
     padding: 0 10px; }
     .main-navigation a:hover {
@@ -292,16 +290,18 @@ span.hamburger-bar {
   transform: translate(-50%, -50%);
   z-index: 1; }
 .page-template-front-page .front-page .one_third.content-column:nth-of-type(odd):after {
-  background: rgba(0, 0, 0, 0.7);
+  background: #000000;
   content: '';
   display: block;
   height: 100%;
   width: 100%;
   margin: 0 auto;
+  opacity: 0.7;
   position: absolute;
   left: 0;
   top: 0;
-  text-align: center; }
+  text-align: center;
+  transition: opacity .5s; }
 .page-template-front-page .front-page .one_third.content-column:nth-of-type(even) h1,
 .page-template-front-page .front-page .one_third.content-column:nth-of-type(even) h2,
 .page-template-front-page .front-page .one_third.content-column:nth-of-type(even) h3,
@@ -314,7 +314,7 @@ span.hamburger-bar {
   transform: translate(-50%, -50%);
   z-index: 1; }
 .page-template-front-page .front-page .one_third.content-column:nth-of-type(even):after {
-  background: rgba(0, 0, 0, 0.7);
+  background: #000000;
   content: '';
   display: block;
   height: 100%;
@@ -324,9 +324,11 @@ span.hamburger-bar {
   position: absolute;
   left: 0;
   top: 0;
-  text-align: center; }
+  text-align: center;
+  transition: opacity .5s; }
 .page-template-front-page .front-page .one_third.content-column:hover:after {
-  background: rgba(26, 26, 26, 0.7); }
+  opacity: .5;
+  transition: opacity .5s; }
 
 .page-template-front-page .front-page .one_half.content-column h1,
 .page-template-front-page .front-page .one_half.content-column h2,
@@ -340,23 +342,24 @@ span.hamburger-bar {
   transform: translate(-50%, -50%);
   z-index: 1; }
 .page-template-front-page .front-page .one_half.content-column:after {
-  background: rgba(0, 0, 0, 0.7);
+  background: #000000;
   content: '';
   display: block;
   height: 100%;
   width: 100%;
   margin: 0 auto;
+  opacity: 0.7;
   position: absolute;
   left: 0;
   top: 0;
   text-align: center; }
 .page-template-front-page .front-page .one_half.content-column:hover:after {
-  background: rgba(26, 26, 26, 0.7); }
+  opacity: .5;
+  transition: opacity .5s; }
 
 .full_width.content-column {
   background: #D9D9D9;
   display: block;
-  float: none;
   margin: 0em;
   padding: 4em 0em;
   text-align: center; }
@@ -370,21 +373,68 @@ span.hamburger-bar {
   .full_width.content-column strong p {
     color: #91181B; }
 
-.page-template-front-page .header-image .wp-post-image {
-  max-height: none;
-  height: 90vh; }
-.page-template-front-page .header-image:after {
-  content: url(/audubon-church/wp-content/themes/audubon-church/assets/icons/achurchreborn.svg);
-  height: auto;
-  max-width: 40em;
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
-  width: 90vw; }
+.time-location--wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 60em; }
   @media (min-width: 37.5em) {
-    .page-template-front-page .header-image:after {
-      width: 68vw; } }
+    .time-location--wrapper {
+      flex-direction: row; } }
+
+.page-template-front-page .header-content {
+  background-position: center center;
+  background-size: cover;
+  height: 90vh; }
+  .page-template-front-page .header-content:before {
+    content: url(/audubon-church/wp-content/themes/audubon-church/assets/icons/thechurchataudubonpark.svg);
+    height: auto;
+    max-width: 40em;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    z-index: 1; }
+    @media (min-width: 37.5em) {
+      .page-template-front-page .header-content:before {
+        width: 68vw; } }
+  .page-template-front-page .header-content:after {
+    background: #000000;
+    content: '';
+    height: 90vh;
+    width: 100%;
+    opacity: .5;
+    position: absolute;
+    left: 0%;
+    top: 0%; }
+
+.bg-image + a span,
+.bg-image + p a span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+
+.church-info {
+  color: #ffffff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  font-family: 'Delius';
+  height: 100%;
+  z-index: 1; }
+  .church-info__time {
+    margin-bottom: 5em;
+    text-align: center;
+    z-index: 1; }
+  .church-info__location {
+    margin-bottom: 5em;
+    text-align: center;
+    z-index: 1; }
 
 .page-template-fullwidth .full-width-page__container {
   margin: 0 auto;
