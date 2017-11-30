@@ -34,6 +34,11 @@ img {
   height: auto;
   max-width: 100%; }
 
+.alignleft {
+  float: left;
+  margin-bottom: 1em;
+  margin-right: 1em; }
+
 li {
   font-size: 1.3em;
   text-decoration: none;
@@ -59,6 +64,9 @@ h2 {
 
 h1, h2, h3, h4, h5, h6, p {
   line-height: 1.5rem; }
+
+p br {
+  display: none; }
 
 /******************************************
 Heading Styles
@@ -91,6 +99,7 @@ Header Styles
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0em 1.5rem;
   position: relative;
   width: 100%; }
   #top-header img {
@@ -98,11 +107,11 @@ Header Styles
     max-width: 307px; }
   #top-header h1.site-title a {
     color: #ffffff;
-    font-family: 'Neucha', cursive; }
+    font-family: 'Delius';
+    font-size: .75em; }
 
 hgroup {
-  display: inline-block;
-  padding-left: 1.5rem; }
+  display: inline-block; }
 
 .page-template-front-page #top-header {
   background: none;
@@ -117,7 +126,7 @@ Navigation Styles
   display: none;
   position: relative;
   z-index: 1; }
-  @media screen and (min-width: 800px) {
+  @media (min-width: 37.5em) {
     .main-navigation {
       display: inline-block; } }
   .main-navigation.open {
@@ -155,8 +164,6 @@ Navigation Styles
   position: relative;
   transition: all 1s ease; }
   .menu-item-has-children .sub-menu {
-    background: #333;
-    border: 2px solid #e6f2ff;
     color: #333333;
     display: flex;
     justify-content: center;
@@ -168,16 +175,8 @@ Navigation Styles
     opacity: 0;
     position: fixed;
     line-height: 5em;
-    right: 0;
-    top: 7em;
-    width: 100%;
+    transition: all .5s ease;
     z-index: 99; }
-    @media screen and (min-width: 750px) {
-      .menu-item-has-children .sub-menu {
-        width: 50%; } }
-    @media screen and (min-width: 1050px) {
-      .menu-item-has-children .sub-menu {
-        width: 33.33%; } }
     .menu-item-has-children .sub-menu a {
       color: #fff; }
     .menu-item-has-children .sub-menu li {
@@ -187,9 +186,9 @@ Navigation Styles
   .menu-item-has-children:hover {
     padding-bottom: 0; } }
 .menu-item-has-children:hover .sub-menu {
-  transition: all 3s ease;
+  transition: all .5s ease;
   justify-content: center;
-  margin-top: 4em;
+  margin-top: 0em;
   max-height: 25em;
   min-height: 5em;
   opacity: 1;
@@ -207,7 +206,7 @@ Navigation Styles
   top: 1em;
   right: 1.5em;
   z-index: 2; }
-  @media screen and (min-width: 800px) {
+  @media (min-width: 37.5em) {
     .hamburger-icon {
       display: none; } }
   .hamburger-icon:hover span.hamburger-bar {
@@ -388,7 +387,7 @@ span.hamburger-bar {
   background-size: cover;
   height: 90vh; }
   .page-template-front-page .header-content:before {
-    content: url(/audubon-church/wp-content/themes/audubon-church/assets/icons/thechurchataudubonpark.svg);
+    content: url(/audubon-church/wp-content/themes/audubon-church/assets/icons/audubon-logo2.svg);
     height: auto;
     max-width: 40em;
     position: absolute;

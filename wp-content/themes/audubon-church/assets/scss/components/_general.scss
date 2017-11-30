@@ -10,6 +10,13 @@ img {
   height: auto;
   max-width: 100%;
 }
+
+.alignleft {
+    float: left;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
 li {
   font-size: 1.3em;
   text-decoration: none;
@@ -38,6 +45,11 @@ h2 {
 
 h1, h2, h3, h4, h5, h6, p {
     line-height: 1.5rem;
+}
+
+p br {
+    // This style declaration removes injected br tag
+    display: none;
 }
 /******************************************
 Heading Styles
