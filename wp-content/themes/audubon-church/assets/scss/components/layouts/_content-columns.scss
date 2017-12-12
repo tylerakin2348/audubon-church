@@ -24,23 +24,23 @@
     }
 }
 .one_half.content-column {
+    max-height: 20em;
     text-align: center;
     position: relative;
     width: 100%;
+    height: auto;
     @include breakpoint(mobile) {
         width: 50%;
     }
     img {
+        max-height: 20em;
         width: 98%;
     }
-    height: auto;
-    width: 100%;
     div.bg-image {
         background-position: center center !important;
-        height: auto;
         background-repeat: no-repeat !important;
         background-size: cover !important;
-        min-height: 30em;
+        max-height: 20em;
         width: 100% !important;
     }
     p {

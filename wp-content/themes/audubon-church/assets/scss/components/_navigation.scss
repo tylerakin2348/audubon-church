@@ -41,7 +41,10 @@ Navigation Styles
     color: $white;
     font-family: 'Delius';
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 .5em;
+    @include breakpoint(mediumScreen) {
+        padding: 0 .75em;
+    }
     &:hover {
       text-decoration: underline;
     }
@@ -58,7 +61,7 @@ Navigation Styles
       font-size: 1rem;
       flex-direction: row;
       list-style: none;
-      margin-top: -2em;
+      margin: 0em .75em;
       min-height: 5em;
       opacity: 0;
       position: fixed;
@@ -68,6 +71,10 @@ Navigation Styles
 
     a {
       color: #fff;
+      padding: 0 .5em;
+      @include breakpoint(mediumScreen) {
+          padding: 0 .75em;
+      }
     }
     li {
         font-size: 1rem;
@@ -80,13 +87,14 @@ Navigation Styles
       padding-bottom: 0;
   }
     .sub-menu {
-      transition: all .5s ease;
-      justify-content: center;
-      margin-top: 0em;
-      max-height: 25em;
-      min-height: 5em;
-      opacity: 1;
-      z-index: -1;
+        background: rgb(148,1,1);
+        transition: all .5s ease;
+        justify-content: center;
+        margin-top: .5em;
+        max-height: 25em;
+        min-height: 5em;
+        opacity: 1;
+        z-index: -1;
     }
   }
 

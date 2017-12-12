@@ -47,10 +47,21 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 1.5rem;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    // Removes default bottom margin on headings
+    margin-bottom: 0em;
+    & + p {
+        // Removes default top margin when a p tag follows a heading element.
+        margin-top: 0em;
+    }
+}
+
 p br {
     // This style declaration removes injected br tag
     display: none;
 }
+
+
 /******************************************
 Heading Styles
 ******************************************/

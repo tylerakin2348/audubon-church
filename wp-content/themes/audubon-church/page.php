@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-  <!-- <div class="page"> -->
 
     <?php
 
@@ -9,5 +8,4 @@
 
     endwhile; endif;
     ?>
-  <!-- </div> -->
 <?php get_footer(); ?>
