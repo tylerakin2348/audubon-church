@@ -4,6 +4,12 @@
         margin: 0 auto;
         max-width: $primaryWidth;
         padding: 1rem;
+        .post {
+            a.read-more {
+                display: block;
+                text-decoration: underline;
+            }
+        }
     }
 }
 

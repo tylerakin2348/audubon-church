@@ -10,7 +10,7 @@ $(".hamburger-icon").on('click',function(){
 $(window).resize(function(e){
     var screenWith = $(window).width();
 
-    if (screenWith >= 800) {
+    if (screenWith >= 600) {
         // This if statement is intended to reflect the small breakpoint
         $('.main-navigation, .hamburger-icon, .hamburger-bar').removeClass('open');
     }

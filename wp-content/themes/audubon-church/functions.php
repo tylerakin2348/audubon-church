@@ -54,3 +54,25 @@ function gc_remove_p_tags_around_images($content)
 	return is_null($contentWithFixedPTags) ? $content : $contentWithFixedPTags;
 }
 add_filter('the_content', 'gc_remove_p_tags_around_images');
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 50;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+/**
+ * Filter the excerpt "read more" string.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function wpdocs_excerpt_more( $more ) {
+	return '...<a class="read-more" href="'.get_the_permalink().'" rel="nofollow">Continue reading >></a>';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
