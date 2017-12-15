@@ -4,6 +4,25 @@
 /*
 * Variables Style Sheet
 */
+.blog .page-wrapper,
+.single-post .page-wrapper {
+  margin: 0 auto;
+  max-width: 60rem;
+  padding: 1rem; }
+
+.post-navigation .newer {
+  border-top: 1px solid #940101;
+  border-right: 1px solid #940101;
+  display: inline-block;
+  height: 1em;
+  width: 1em; }
+.post-navigation .older {
+  border-top: 1px solid #940101;
+  border-right: 1px solid #940101;
+  display: inline-block;
+  height: 1em;
+  width: 1em; }
+
 /******************************************
 Footer Styles
 ******************************************/
