@@ -1,9 +1,26 @@
-.page-template-fullwidth {
+.page-template-front-page {
     .full-width-page {
         &__container {
             margin: 0 auto;
             max-width: 60em;
             padding: 0rem 1rem;
+        }
+    }
+    .latest-sermon--block {
+        font-family: 'delius';
+    }
+    .latest-post--block {
+        font-family: 'delius';
+        position: relative;
+        .latest-post {
+            position: absolute;
+                left: 50%;
+                top: 65%;
+                transform: translate(-50%,-50%);
+            z-index: 1;
+            a {
+                color: $white;
+            }
         }
     }
 }

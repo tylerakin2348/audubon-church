@@ -48,70 +48,7 @@
         margin: 0;
     }
 }
-.page-template-front-page .front-page .one_third.content-column {
-    &:nth-of-type(odd) {
-        h1,
-        h2,
-        h3,
-        h4 {
-            color: $white;
-            margin-top: 0;
-            position: absolute;
-                left: 50%;
-                top: 50%;
-            transform: translate(-50%,-50%);
-            z-index: 1;
-        }
-        &:after {
-            background: $blackOverlay;
-            content: '';
-            display: block;
-            height: 100%;
-            width: 100%;
-            margin: 0 auto;
-            opacity: 0.7;
-            position: absolute;
-            left: 0;
-            top: 0;
-            text-align: center;
-            transition: opacity .5s;
-        }
-    }
-    &:nth-of-type(even) {
-        h1,
-        h2,
-        h3,
-        h4 {
-            color: $white;
-            margin-top: 0;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
-            z-index: 1;
-        }
-        &:after {
-            background: $blackOverlay;
-            content: '';
-            display: block;
-            height: 100%;
-            width: 100%;
-            margin: 0 auto;
-            opacity: 0.7;
-            position: absolute;
-            left: 0;
-            top: 0;
-            text-align: center;
-            transition: opacity .5s;
-        }
-    }
-    &:hover {
-        &:after {
-            opacity: .5;
-            transition: opacity .5s;
-        }
-    }
-}
+
 .page-template-front-page .front-page .one_half.content-column {
     h1,
     h2,

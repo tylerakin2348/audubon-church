@@ -12,7 +12,7 @@ Navigation Styles
       display: inline-block;
   }
   &.open {
-    background: #720101;
+    background: $audubonRed;
     display: flex;
         align-items: center;
         justify-content: center;
@@ -70,9 +70,10 @@ Navigation Styles
           opacity: 0;
           padding: 1em;
           position: fixed;
+          transition: opacity .4s;
       }
     a {
-      color: #fff;
+      color: $white;
       padding: 0 .5em;
       @include breakpoint(mediumScreen) {
           padding: 0 .75em;
@@ -86,19 +87,23 @@ Navigation Styles
   }
 }
 .menu-item-has-children:hover {
-
-    @media screen and (min-width: 800px) {
-      padding-bottom: 0;
-  }
+    a {
+        @include breakpoint(mobile) {
+            padding-bottom: 3em;
+        }
+    }
     .sub-menu {
         transition: all .5s ease;
         justify-content: center;
         max-height: 25em;
         @include breakpoint(mobile) {
-            background: rgb(148,1,1);
+            background: $audubonRed;
+            margin-top: 1.5em;
             opacity: 1;
+            transition: opacity .4s;
         }
     }
+
   }
 
 .hamburger-icon-options {
