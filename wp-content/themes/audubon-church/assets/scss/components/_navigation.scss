@@ -67,10 +67,10 @@ Navigation Styles
 
       @include breakpoint(mobile) {
           margin: 0em .75em;
-          opacity: 0;
+          display: none;
+          // opacity: 0;
           padding: 1em;
           position: fixed;
-          transition: opacity .4s;
       }
     a {
       color: $white;
@@ -97,10 +97,9 @@ Navigation Styles
         justify-content: center;
         max-height: 25em;
         @include breakpoint(mobile) {
-            background: $audubonRed;
-            margin-top: 1.5em;
-            opacity: 1;
-            transition: opacity .4s;
+            background: $audubonRedLight;
+            display: inline-block;
+            margin-top: 1.44rem;
         }
     }
 

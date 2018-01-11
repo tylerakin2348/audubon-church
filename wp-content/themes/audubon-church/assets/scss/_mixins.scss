@@ -3,8 +3,11 @@
     @media (min-width: 70em) { @content ; }
  }
    @else if $point == mediumScreen {
-    @media (min-width: 50em) { @content ; }
+    @media (min-width: 60em) { @content ; }
  }
+ @else if $point == smallScreen {
+  @media (min-width: 50em) { @content ; }
+}
   @else if $point == mobile {
     @media (min-width: 37.5em)  { @content ; }
  }

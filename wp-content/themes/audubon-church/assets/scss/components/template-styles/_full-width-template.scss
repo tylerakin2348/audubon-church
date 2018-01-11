@@ -24,3 +24,13 @@
         }
     }
 }
+
+.media-object {
+    margin: 3em 0em;
+    img {
+        width: 100%;
+        @include breakpoint(mobile) {
+            width: auto;
+        }
+    }
+}

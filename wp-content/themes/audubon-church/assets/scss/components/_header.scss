@@ -3,14 +3,25 @@ Header Styles
 ******************************************/
 
 #top-header {
-        background: rgba(0,0,0,.7);
+        // background: rgba(0,0,0,.7);
+        background: $audubonRed;
         display: flex;
         align-items: center;
         justify-content: space-between;
-    padding: 0em 1.5rem;
+    padding: 0rem 1.5rem;
     position: relative;
     width: 100%;
     z-index: 2000;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        padding: 0rem;
+        padding-bottom: 1.45rem;
+    }
+
+    @include breakpoint(mediumScreen) {
+        flex-direction: row;
+        padding: 0rem 1.5rem;
+    }
 
   img {
     max-height: 100px;

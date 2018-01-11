@@ -21,7 +21,7 @@
                 padding: 5% 0em;
                 width: 33.33%;
             }
-            &:last-of-type {
+            p:last-of-type {
                 margin-bottom: 0em;
                 margin-right: 0em;
             }
@@ -44,7 +44,7 @@
             &:hover {
                 .column_primary-content {
                     h1, h2, h3, h4, h5, h6 {
-                        opacity: .1;
+                        opacity: 0;
                         transition: opacity .5s ease-out;
                     }
                 }

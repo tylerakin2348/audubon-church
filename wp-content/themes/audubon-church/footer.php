@@ -8,6 +8,7 @@
           &copy; <?php echo date("Y"); ?> Web Interest Site Design
         </p>
     </div>
+    <a href="/TODO">Directory</a>
 </footer>
 <script src="<?php bloginfo('template_directory');?>/assets/js/jquery.js"></script>
 <script src="<?php bloginfo('template_directory');?>/assets/js/main.js"></script>

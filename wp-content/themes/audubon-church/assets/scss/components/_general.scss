@@ -35,11 +35,11 @@ ul {
   -webkit-margin-before: 0;
 }
 a {
-  color: $audubonRed;
+  color: $audubonRedLight;
   display: inline;
   text-decoration: none;
   &:hover {
-    color: darken($audubonRed, 4%);
+    color: $audubonRed;
   }
 }
 
@@ -58,10 +58,11 @@ em {
 
 p {
     line-height: 1.75rem;
+    margin-top: 0rem;
 }
 
 .callout-text--red {
-    color: $audubonRed;
+    color: $audubonRedLight;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -191,7 +192,7 @@ Heading Styles
 }
 
 .page-title {
-    color: $audubonRed;
+    color: $audubonRedLight;
     font-weight: 400;
-    padding: 1rem 0rem;
+    padding: 1rem 0rem 0rem 0rem;
 }

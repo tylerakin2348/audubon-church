@@ -1,5 +1,9 @@
 .blog,
 .single-post {
+    .page-title {
+        margin-bottom: 0em;
+        padding-bottom: 0em;
+    }
     .page-wrapper {
         margin: 0 auto;
         max-width: $primaryWidth;
