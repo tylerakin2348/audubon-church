@@ -26,7 +26,8 @@
     <?php else : ?>
         <?php if (is_front_page()) : ?>
             <hgroup>
-                <h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='The Church in Audubon Park' rel='home'>est. 1944</a></h1>
+                <h1 class='site-title--est'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='Audubon Baptist' rel='home'>est. 1944</a></h1>
+                <h1 class='site-title--reborn'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='Audubon Baptist' rel='home'>reborn 2017</a></h1>
             </hgroup>
 
         <?php else : ?>

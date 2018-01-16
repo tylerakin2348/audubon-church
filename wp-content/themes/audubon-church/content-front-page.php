@@ -13,18 +13,19 @@
    <?php the_content(); ?>
 
    <div class="default-layout aligncenter">
-       <p>We envision a Church committed to <span class="callout-text--red">SIMPLICITY IN STRUCTURE</span>, possessing <span class="callout-text--red">MISSIONAL</span> hearts and feet for the lost, demonstrating <span class="callout-text--red">STEWARDSHIP</span> of the Saints and resources entrusted to our care, all for the glory and under the kingship of our Lord Jesus Christ.</p>
+       <p>We see a Church faithful from <span class="callout-text--red">GENERATION TO GENERATION</span>, possessing <span class="callout-text--red">MISSIONAL</span> hearts and feet for the lost, demonstrating <span class="callout-text--red">STEWARDSHIP</span> of the Saints and resources entrusted to our care, all for the glory of our Lord Jesus Christ.</p>
    </div>
 
    <div class="three-column-layout background-overlay">
        <div class="inner-container">
            <div class="column">
                <div class="column_primary-content">
-                   <h3>Simple</h3><img class="alignnone size-full wp-image-20" src="http://localhost:8869/audubon-church/wp-content/uploads/2017/10/IMG_2224.jpg" alt="" width="2000" height="1500" />
+                   <h3>Generation to Generation</h3><img class="alignnone size-full wp-image-20" src="http://localhost:8869/audubon-church/wp-content/uploads/2017/10/IMG_2224.jpg" alt="" width="2000" height="1500" />
                    <a href="http://localhost:8869/audubon-church/our-church/"><span></span></a>
                </div>
                <div class="column_secondary-content">
-                   <p>"And they devoted themselves to the apostles' teaching and the fellowship, to the breaking of bread and the prayers.  Acts 2:42"</p>
+                   <p>"One generation shall commend Your works to another, and shall declare Your mighty acts.
+                       <br />Psalm 145:4"</p>
                </div>
            </div>
 
@@ -34,7 +35,8 @@
                    <a href="http://localhost:8869/audubon-church/our-church/"><span></span></a>
                </div>
                <div class="column_secondary-content">
-                   <p>"Declare his glory among the nations, his marvelous works among all the peoples!  1 Chronicles 16:24"</p>
+                   <p>"Declare his glory among the nations, his marvelous works among all the peoples!
+                       <br />1 Chronicles 16:24"</p>
                </div>
            </div>
 
@@ -44,7 +46,8 @@
                     <a href="http://localhost:8869/audubon-church/our-church/leadership"><span></span></a>
                 </div>
                 <div class="column_secondary-content">
-                    <p>"So teach us to number our days that we may get a heart of wisdom.  Psalm 90:12"</p>
+                    <p>"So teach us to number our days that we may get a heart of wisdom.
+                        <br />Psalm 90:12"</p>
                 </div>
             </div>
        </div>

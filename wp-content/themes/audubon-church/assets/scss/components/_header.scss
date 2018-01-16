@@ -27,7 +27,9 @@ Header Styles
     max-height: 100px;
     max-width: 307px;
   }
-  h1.site-title {
+  h1.site-title,
+  h1.site-title--est,
+  h1.site-title--reborn {
       a {
           color: $white;
           font-family: 'Delius';
@@ -45,5 +47,53 @@ hgroup {
         background: none;
         position: absolute;
         z-index: 2;
+    }
+}
+
+
+@-webkit-keyframes fadeInAndOut {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInAndOut {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeInAndOut2 {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeInAndOut2 {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.site-title--est {
+    position: relative;
+    -webkit-animation: fadeInAndOut 8s;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation: fadeInAndOut 8s;
+    animation-iteration-count: infinite;
+    a {
+        color: $white;
+    }
+}
+
+.site-title--reborn {
+    -webkit-animation: fadeInAndOut2 8s;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation: fadeInAndOut2 8s;
+    animation-iteration-count: infinite;
+    position: absolute;
+        top: 0;
+    a {
+        color: $white;
     }
 }

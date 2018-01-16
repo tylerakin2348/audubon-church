@@ -2,113 +2,126 @@
 Navigation Styles
 ******************************************/
 
-.main-navigation {
+nav.main-navigation {
     padding-right: 1.5rem;
     display: none;
     position: relative;
     z-index: 1;
+    @include breakpoint(mobile) {
+        display: inline-block;
+    }
 
-  @include breakpoint(mobile) {
-      display: inline-block;
-  }
-  &.open {
-    background: $audubonRed;
-    display: flex;
-        align-items: center;
-        justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    opacity: 1;
-    position: fixed;
-        left: 0;
-        top: 0;
-    text-align: center;
-    z-index: 2;
-     ul.menu {
+    ul.menu {
+        li {
+            list-style: none;
+            a {
+                color: $white;
+                font-family: 'Delius';
+                margin: 0 auto;
+                padding: 0 .5em;
+                @include breakpoint(mediumScreen) {
+                    padding: 0 .75em;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        & > li {
+            // Top Level menu items
+            font-size: 1.2em;
+        }
+
+        li.menu-item-has-children {
+            // Menu item that has children
+            position: relative;
+            transition: all 1s ease;
+            ul.sub-menu {
+                // This sets the sub-menu's styles. Note: on mobile, the sub menu is automatically visible
+                color: #333333;
+                justify-content: center;
+                font-size: 1rem;
+                flex-direction: row;
+                list-style: none;
+                min-height: 1em;
+                line-height: 1em;
+                transition: all .5s ease;
+                z-index: 99;
+                @include breakpoint(mobile) {
+                    // This hides the sub-menu to enable the hide/show reveal on hover
+                    margin: 0em .75em;
+                    display: none;
+                    padding: 1em;
+                    position: fixed;
+                }
+
+                a {
+                    color: $white;
+                    padding: 0 .5em;
+                    @include breakpoint(mediumScreen) {
+                        padding: 0 .75em;
+                    }
+                }
+
+                li {
+                    float: none;
+                    font-size: 1rem;
+                    padding: .5em 0em;
+                }
+            }
+
+            &:hover {
+                // Hovering over a menu item with children
+                a {
+                    @include breakpoint(mobile) {
+                        padding-bottom: 3em;
+                    }
+                }
+                .sub-menu {
+                    transition: all .5s ease;
+                    justify-content: center;
+                    max-height: 25em;
+                    @include breakpoint(mobile) {
+                        background: $audubonRedLight;
+                        display: inline-block;
+                        margin-top: 1.44rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &.open {
+        // Open class that applies to the mobile menu
+        // Note: this class is attached to nav.main-navigation
+        background: $audubonRed;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        opacity: 1;
+        position: fixed;
+            left: 0;
+            top: 0;
+        text-align: center;
+        z-index: 2;
+        ul.menu {
             display: flex;
                 flex-direction: column;
-            @include breakpoint(mobile) {
-                flex-direction: row;
-            }
+                @include breakpoint(mobile) {
+                    flex-direction: row;
+                }
             & > li {
+                // Top Level menu items
                 float: none;
+                list-style: none;
                 text-align: center;
                 padding: 1.5em 0;
             }
         }
-  }
-  a {
-    color: $white;
-    font-family: 'Delius';
-    margin: 0 auto;
-    padding: 0 .5em;
-    @include breakpoint(mediumScreen) {
-        padding: 0 .75em;
     }
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-.menu-item-has-children {
-  position: relative;
-  transition: all 1s ease;
-  .sub-menu {
-      color: #333333;
-      justify-content: center;
-      font-size: 1rem;
-      flex-direction: row;
-      list-style: none;
-      min-height: 1em;
-      line-height: 1em;
-      transition: all .5s ease;
-      z-index: 99;
-
-      @include breakpoint(mobile) {
-          margin: 0em .75em;
-          display: none;
-          // opacity: 0;
-          padding: 1em;
-          position: fixed;
-      }
-    a {
-      color: $white;
-      padding: 0 .5em;
-      @include breakpoint(mediumScreen) {
-          padding: 0 .75em;
-      }
-    }
-    li {
-        float: none;
-        font-size: 1rem;
-        padding: .5em 0em;
-    }
-  }
-}
-.menu-item-has-children:hover {
-    a {
-        @include breakpoint(mobile) {
-            padding-bottom: 3em;
-        }
-    }
-    .sub-menu {
-        transition: all .5s ease;
-        justify-content: center;
-        max-height: 25em;
-        @include breakpoint(mobile) {
-            background: $audubonRedLight;
-            display: inline-block;
-            margin-top: 1.44rem;
-        }
-    }
-
-  }
-
-.hamburger-icon-options {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
 
 .hamburger-icon {
@@ -130,31 +143,30 @@ Navigation Styles
     &.open {
         position: fixed;
     }
-}
 
-span.hamburger-bar {
-    background: $white;
-    display: block;
-    height: 4px;
-    width: 2em;
-    margin: .5em auto;
-    transition: all .5s;
-
-    &.open {
-        transform: rotate(90deg);
+    span.hamburger-bar {
+        background: $white;
+        display: block;
+        height: 4px;
+        width: 2em;
+        margin: .5em auto;
         transition: all .5s;
-        &:first-of-type {
-            width: 1.5em;
+
+        &.open {
+            transform: rotate(90deg);
+            transition: all .5s;
+            &:first-of-type {
+                width: 1.5em;
+            }
+        }
+        &.crossbar {
+            transform: rotate(0deg);
+            transition: all .5s;
+            transform: translate(0%,0%);
+        }
+        &.crossbar.open {
+            transition: all .5s;
+            transform: translate(0%,-60%);
         }
     }
-    &.crossbar {
-        transform: rotate(0deg);
-        transition: all .5s;
-        transform: translate(0%,0%);
-    }
-    &.crossbar.open {
-        transition: all .5s;
-        transform: translate(0%,-60%);
-    }
-
 }
