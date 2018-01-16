@@ -29,9 +29,27 @@ li {
 }
 ul {
   margin: 0 auto;
+  margin-left: 2rem;
   -webkit-padding-start: 0;
   -webkit-margin-before: 0;
+  li {
+      line-height: 1.75rem;
+      padding-left: .5rem;
+  }
 }
+
+ol {
+    margin: 0 auto;
+    margin-left: 2rem;
+    -webkit-padding-start: 0;
+    -webkit-margin-before: 0;
+    li {
+        line-height: 1.75rem;
+        list-style: decimal;
+        padding-left: .5rem;
+    }
+}
+
 a {
   color: $audubonRedLight;
   display: inline;

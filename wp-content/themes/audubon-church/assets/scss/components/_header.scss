@@ -20,7 +20,7 @@ Header Styles
 
     @include breakpoint(mediumScreen) {
         flex-direction: row;
-        padding: 0rem 1.5rem;
+        padding-bottom: 0rem;
     }
 
   img {
@@ -40,6 +40,9 @@ Header Styles
 
 hgroup {
     display: inline-block;
+    @include breakpoint(mediumScreen) {
+        padding-left: 1.5rem;
+    }
 }
 
 .page-template-front-page {
