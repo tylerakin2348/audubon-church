@@ -3,17 +3,22 @@ Navigation Styles
 ******************************************/
 
 nav.main-navigation {
-    padding-right: 1.5rem;
     display: none;
     position: relative;
     z-index: 1;
     @include breakpoint(mobile) {
         display: inline-block;
     }
+    @include breakpoint(mediumScreen) {
+        display: inline-block;
+        padding-right: 1.5rem;
+    }
 
     ul.menu {
+        margin-left: 0rem;
         li {
             list-style: none;
+            padding-left: 0rem;
             a {
                 color: $white;
                 font-family: 'Delius';
@@ -24,6 +29,13 @@ nav.main-navigation {
                 }
                 &:hover {
                     text-decoration: underline;
+                }
+            }
+            &:last-of-type {
+                a {
+                    @include breakpoint(mediumScreen) {
+                        padding-right: 0rem;
+                    }
                 }
             }
         }
@@ -44,6 +56,7 @@ nav.main-navigation {
                 font-size: 1rem;
                 flex-direction: row;
                 list-style: none;
+                margin-left: 0rem;
                 min-height: 1em;
                 line-height: 1em;
                 transition: all .5s ease;
@@ -67,7 +80,8 @@ nav.main-navigation {
                 li {
                     float: none;
                     font-size: 1rem;
-                    padding: .5em 0em;
+                    line-height: 2rem;
+                    padding: 0rem;
                 }
             }
 
@@ -85,7 +99,10 @@ nav.main-navigation {
                     @include breakpoint(mobile) {
                         background: $audubonRedLight;
                         display: inline-block;
-                        margin-top: 1.44rem;
+                        margin-top: 1.45rem;
+                    }
+                    @include breakpoint(mediumScreen) {
+                        margin-top: 1.25rem;
                     }
                 }
             }
