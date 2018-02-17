@@ -25,6 +25,8 @@ Footer Styles
   background: #5e0101;
   color: #ffffff;
   font-family: 'delius';
+  padding-top: 1em;
+  position: relative;
   text-align: center; }
   .foot div.foot-content {
     padding: 1em; }
@@ -32,6 +34,14 @@ Footer Styles
       color: #ffffff;
       padding-right: 0;
       text-align: center; }
+      .foot div.foot-content a.directory-link {
+        color: white;
+        padding: 2em;
+        position: absolute;
+        right: 0;
+        top: 0; }
+      .foot div.foot-content a:hover {
+        text-decoration: underline; }
 
 .design-labels {
   text-align: center; }
@@ -59,7 +69,6 @@ img {
 
 li {
   text-decoration: none;
-  float: left;
   margin: 0 auto; }
 
 ul {
@@ -93,7 +102,7 @@ h2 {
   font-size: 1.5em; }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.5rem; }
+  line-height: 2rem; }
 
 em {
   color: #720101; }
@@ -158,7 +167,7 @@ Heading Styles
       height: 101%;
       width: 100%;
       margin: 0 auto;
-      opacity: 0.7;
+      opacity: 0.5;
       position: absolute;
       left: 0;
       top: 0;
@@ -183,7 +192,7 @@ Heading Styles
       height: 101%;
       width: 100%;
       margin: 0 auto;
-      opacity: 0.7;
+      opacity: 0.5;
       position: absolute;
       left: 0;
       top: 0;
@@ -198,6 +207,27 @@ Heading Styles
   color: #860101;
   font-weight: 400;
   padding: 1rem 0rem 0rem 0rem; }
+
+.site-content__container {
+  margin: 0 auto;
+  max-width: 60rem; }
+
+.logo-container {
+  font-size: 0;
+  text-align: center; }
+  .logo-container .logo {
+    display: inline-block;
+    font-size: 16px;
+    padding: 0rem 2rem;
+    text-align: center;
+    vertical-align: middle;
+    width: 30%; }
+    @media (min-width: 37.5em) {
+      .logo-container .logo {
+        width: 25%; } }
+    @media (min-width: 60em) {
+      .logo-container .logo {
+        width: 18%; } }
 
 /******************************************
 Header Styles
@@ -309,6 +339,7 @@ nav.main-navigation {
   nav.main-navigation ul.menu {
     margin-left: 0rem; }
     nav.main-navigation ul.menu li {
+      float: left;
       list-style: none;
       padding-left: 0rem; }
       nav.main-navigation ul.menu li a {
@@ -431,6 +462,78 @@ nav.main-navigation {
     .hamburger-icon span.hamburger-bar.crossbar.open {
       transition: all .5s;
       transform: translate(0%, -60%); }
+
+.two-column-layout {
+  max-width: 60rem;
+  margin: 0 auto;
+  margin-bottom: 4em;
+  overflow: hidden;
+  position: relative; }
+  .two-column-layout .inner-container {
+    display: flex;
+    flex-direction: column; }
+    @media (min-width: 37.5em) {
+      .two-column-layout .inner-container {
+        flex-direction: row;
+        justify-content: center; } }
+    .two-column-layout .inner-container .column {
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: .5em;
+      overflow: hidden;
+      padding: 0em; }
+      @media (min-width: 37.5em) {
+        .two-column-layout .inner-container .column {
+          margin-bottom: 0em;
+          margin-right: .5em;
+          margin: 0% 0%;
+          padding: 0em;
+          width: 40%; } }
+      .two-column-layout .inner-container .column p:last-of-type {
+        margin-bottom: 0em;
+        margin-right: 0em; }
+      .two-column-layout .inner-container .column_primary-content {
+        text-align: center; }
+        .two-column-layout .inner-container .column_primary-content h1, .two-column-layout .inner-container .column_primary-content h2, .two-column-layout .inner-container .column_primary-content h3, .two-column-layout .inner-container .column_primary-content h4, .two-column-layout .inner-container .column_primary-content h5, .two-column-layout .inner-container .column_primary-content h6 {
+          opacity: 1;
+          transition: opacity .5s ease-out;
+          width: 100%; }
+        .two-column-layout .inner-container .column_primary-content h3 i {
+          font-size: .9em; }
+      .two-column-layout .inner-container .column_secondary-content {
+        color: #ffffff;
+        text-align: center;
+        padding: 5%;
+        position: absolute;
+        transform: translateY(20em);
+        transition: transform .5s ease-out;
+        z-index: 1; }
+      .two-column-layout .inner-container .column:last-of-type {
+        margin-left: 2.5%; }
+      .two-column-layout .inner-container .column:hover:after {
+        opacity: 0; }
+  .two-column-layout.background-overlay .inner-container .column:after {
+    background: tan;
+    opacity: .3; }
+  .two-column-layout.background-overlay .inner-container .column:hover:after {
+    opacity: 0; }
+  .two-column-layout.background-overlay .inner-container .column:nth-of-type(even) h3 {
+    line-height: 1.25rem; }
+  .two-column-layout .external-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2; }
+
+.video-container {
+  margin: 0 auto;
+  max-width: 60rem;
+  text-align: center; }
 
 .three-column-layout {
   overflow: hidden;
@@ -634,7 +737,7 @@ nav.main-navigation {
     content: '';
     height: 90vh;
     width: 100%;
-    opacity: .5;
+    opacity: .4;
     position: absolute;
     left: 0%;
     top: 0%; }
@@ -670,7 +773,18 @@ nav.main-navigation {
 .page-template-front-page .full-width-page__container {
   margin: 0 auto;
   max-width: 60em;
+  overflow: hidden;
   padding: 0rem 1rem; }
+.page-template-front-page .page-title {
+  display: inline-block;
+  padding: 1em 1em;
+  color: #720101;
+  display: inline-block;
+  font-weight: 700;
+  padding: 2rem 0rem;
+  width: 100%;
+  width: auto;
+  margin-bottom: 0; }
 .page-template-front-page .latest-sermon--block {
   font-family: 'delius'; }
 .page-template-front-page .latest-post--block {
@@ -685,12 +799,12 @@ nav.main-navigation {
     .page-template-front-page .latest-post--block .latest-post a {
       color: #ffffff; }
 
-.media-object {
-  margin: 3em 0em; }
-  .media-object img {
-    width: 100%; }
-    @media (min-width: 37.5em) {
-      .media-object img {
-        width: auto; } }
+.media-object img {
+  width: 100%; }
+  @media (min-width: 37.5em) {
+    .media-object img {
+      width: auto; } }
+.media-object__content {
+  overflow: hidden; }
 
 /*# sourceMappingURL=style.css.map */

@@ -24,9 +24,9 @@ img {
 
 li {
   text-decoration: none;
-  float: left;
   margin: 0 auto;
 }
+
 ul {
   margin: 0 auto;
   margin-left: 2rem;
@@ -65,7 +65,7 @@ h2 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    line-height: 1.5rem;
+    line-height: 2rem;
 }
 
 em {
@@ -162,7 +162,7 @@ Heading Styles
                 height: 101%;
                 width: 100%;
                 margin: 0 auto;
-                opacity: 0.7;
+                opacity: 0.5;
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -191,7 +191,7 @@ Heading Styles
                 height: 101%;
                 width: 100%;
                 margin: 0 auto;
-                opacity: 0.7;
+                opacity: 0.5;
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -213,4 +213,32 @@ Heading Styles
     color: $audubonRedLight;
     font-weight: 400;
     padding: 1rem 0rem 0rem 0rem;
+}
+
+.site-content {
+
+    &__container {
+        margin: 0 auto;
+        max-width: $primaryWidth;
+    }
+}
+
+
+.logo-container {
+    font-size: 0;
+    text-align: center;
+    .logo {
+        display: inline-block;
+        font-size: 16px;
+        padding: 0rem 2rem;
+        text-align: center;
+        vertical-align: middle;
+        width: 30%;
+        @include breakpoint(mobile) {
+            width: 25%;
+        }
+        @include breakpoint(mediumScreen) {
+            width: 18%;
+        }
+    }
 }

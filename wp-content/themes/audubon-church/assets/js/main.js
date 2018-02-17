@@ -26,6 +26,7 @@ $( document ).ready(function() {
         //   div.addClass('bg-image');
         //   img.replaceWith(div);
         // });
+        $("iframe")[0].play();
 
     });
     $(".hamburger-icon").on('click',function(){

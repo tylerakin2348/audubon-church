@@ -95,3 +95,120 @@ function arphabet_widgets_init() {
 
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
+
+// 
+//
+// use Carbon_Fields\Container;
+// use Carbon_Fields\Field;
+//
+// add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
+// add_action( 'carbon_fields_register_fields', 'crb_attach_template_options' );
+//
+// 	function crb_attach_theme_options() {
+// 	    Container::make( 'theme_options', __( 'Theme Options', 'crb' ) )
+// 	        ->add_fields( array(
+// 	            Field::make( 'text', 'crb_text', 'Text Field' ),
+// 				Field::make( 'rich_text', 'crb_footer_copyright', 'Copyright' ),
+// 	        ) );
+// 	}
+//
+// 		add_action( 'carbon_fields_register_fields', 'crb_attach_post_meta2' );
+// 		function crb_attach_post_meta2() {
+// 		    Container::make( 'post_meta', __( 'Page Content', 'crb' ) )
+// 		        ->where( 'post_type', '=', 'page' ) // only show our new fields on pages
+// 		        ->add_fields( array(
+// 		            Field::make( 'complex', 'crb_content', 'Content' )
+// 		                ->set_layout( 'tabbed-vertical' )
+//
+// 		                ->add_fields( array(
+// 							Field::make( 'select', 'crb_layout_type2', 'Layout Type' )
+// 								->add_options( array(
+// 									'default_layout' => 'Default Layout',
+// 									'two_column_layout' => 'Two Column Layout',
+// 									'three_column_layout' => 'Three Column Layout',
+// 								) ),
+//
+// 							Field::make( 'complex', 'layout_default', 'Default Layout' )
+// 								->add_fields( array(
+// 									// Start of Column 1
+// 									Field::make( 'rich_text', 'text_content11', 'Text Editor' ),
+// 								))
+// 								->set_conditional_logic( array(
+// 									array(
+// 										'field' => 'crb_layout_type2',
+// 										'value' => 'default_layout',
+// 										'compare' => '=',
+// 									)
+// 								) ), // These parenthese accord with the add_fields within the two column layout above.
+//
+//                     //
+// 					// 			// Two Column Layout
+// 					// 			Field::make( 'complex', 'layout_two_column', 'Two Column Layout' )
+// 					// 				->add_fields( array(
+// 					// 					// Start of Column 1
+// 					// 					Field::make( 'rich_text', 'text_content1', 'Text Editor' )
+// 					// 						->set_width( 55 ),
+// 					// 					Field::make( 'image', 'background_image1', 'Background Image' )
+// 					// 						->set_width( 10 ),
+// 					// 					// End of Column 1
+// 					// 					// Start of Column 2
+// 					// 					Field::make( 'rich_text', 'text_content2', 'Text Editor' )
+// 					// 						->set_width( 55 ),
+// 					// 					Field::make( 'image', 'background_image2', 'Background Image' )
+// 					// 					->set_width( 10 ),
+// 					// 				// End of Column 2
+//                     //
+// 					// 			)) // These parenthese accord with the add_fields within the two column layout above.
+// 					// 			->set_conditional_logic( array( // This conditional determines when the two column layout displays
+// 					// 				array(
+// 					// 					'field' => 'crb_layout_type2',
+// 					// 					'value' => 'two_column_layout',
+// 					// 					'compare' => '=',
+// 					// 				)
+//                     //
+// 					// 			) ),
+// 					// 			// End of Two Column Layout
+// 					// 		// Start of Three Column Layout
+// 					// 		Field::make( 'complex', 'layout_three_column', 'Three Column Layout' )
+// 					// 			->add_fields( array(
+// 					// 				// Start of Column 1
+// 					// 				Field::make( 'rich_text', 'text_content1', 'Text Editor' )
+// 					// 					->set_width( 55 ),
+// 					// 				Field::make( 'image', 'background_image1', 'Background Image' )
+// 					// 					->set_width( 10 ),
+// 					// 				// End of Column 1
+// 					// 				// Start of Column 2
+// 					// 				Field::make( 'rich_text', 'text_content2', 'Text Editor' )
+// 					// 					->set_width( 55 ),
+// 					// 				Field::make( 'image', 'background_image2', 'Background Image' )
+// 					// 				->set_width( 10 ),
+// 					// 			// End of Column 2
+// 					// 			// Start of Column 3
+// 					// 			Field::make( 'rich_text', 'text_content3', 'Text Editor' )
+// 					// 				->set_width( 55 ),
+// 					// 			Field::make( 'image', 'background_image3', 'Background Image' )
+// 					// 			->set_width( 10 ),
+// 					// 		// End of Column 3
+// 					// 	)) // These parenthese accord with the add_fields within the two column layout above.
+// 					// 	->set_conditional_logic( array( // This conditional determines when the two column layout displays
+// 					// 		array(
+// 					// 			'field' => 'crb_layout_type2',
+// 					// 			'value' => 'three_column_layout',
+// 					// 			'compare' => '=',
+// 					// 		)
+// 					// 	) ),
+// 					// // End of Three Column Layout
+// 					) ), // These parentheses appear in the parent add_fields
+// 		        ) ); // These parenthese accord one step higher, including the select field
+// 		} // This closes the fields function
+
+
+//
+//
+// add_action( 'admin_head', 'hide_editor' );
+// function hide_editor() {
+//     $template_file = basename( get_page_template() );
+//     if($template_file == 'fullwidth.php'){ // template
+//         remove_post_type_support('page', 'editor');
+//     }
+// }

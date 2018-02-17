@@ -1,10 +1,23 @@
 .page-template-front-page {
+        // overflow: hidden;
     .full-width-page {
         &__container {
             margin: 0 auto;
             max-width: 60em;
+            overflow: hidden;
             padding: 0rem 1rem;
         }
+    }
+    .page-title {
+        display: inline-block;
+        padding: 1em 1em;
+        color: $audubonRed;
+        display: inline-block;
+        font-weight: 700;
+        padding: 2rem 0rem;
+        width: 100%;
+        width: auto;
+        margin-bottom: 0;
     }
     .latest-sermon--block {
         font-family: 'delius';
@@ -26,11 +39,13 @@
 }
 
 .media-object {
-    margin: 3em 0em;
     img {
         width: 100%;
         @include breakpoint(mobile) {
             width: auto;
         }
+    }
+    &__content {
+        overflow: hidden;
     }
 }

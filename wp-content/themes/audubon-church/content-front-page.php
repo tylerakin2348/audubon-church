@@ -3,7 +3,7 @@
         get_post_thumbnail_id( $post->ID ) ); ?>');">
         <div class="church-info">
             <div class="church-info__time">
-                <p>Bible Study at 9:30 am <br> Worship Service at 10:45 am</p>
+                <p>Bible Study at 9:30 am <br> Worship Service at 10:40 am</p>
             </div>
             <div class="church-info__location">
                 <p>1046 Hess Lane. <br> Louisville, KY 40217</p>
@@ -52,30 +52,5 @@
             </div>
        </div>
    </div>
-<!--
-   <div class="default-layout aligncenter">
-       <p>Blessed be the God and Father of our Lord Jesus Christ! According to his great mercy, he has caused us to be born again to a living hope through the resurrection of Jesus Christ from the dead.<br>1 Peter 1:3</p>
-   </div>
 
-   <div class="half-and-half-layout background-overlay">
-       <div class="inner-container">
-           <div class="column latest-sermon--block">
-               <h3>Latest Sermon</h3><img class="alignnone size-full wp-image-33" src="http://localhost:8869/audubon-church/wp-content/uploads/2017/10/IMG_2258.jpg" alt="" width="2000" height="2667" />
-           </div>
-           <div class="column latest-post--block">
-               <h3>Latest Article</h3><img class="alignnone size-full wp-image-25" src="http://localhost:8869/audubon-church/wp-content/uploads/2017/10/IMG_2244.jpg" alt="" width="2000" height="2667" /><a href="http://localhost:8869/audubon-church/articles/"><span></span></a>
-               <?php
-                    $args = array( 'numberposts' => '1' );
-                    $recent_posts = wp_get_recent_posts( $args );
-                    foreach( $recent_posts as $recent ){
-                        printf( '<span class="latest-post"><a href="%1$s">%2$s</a></span>',
-                             esc_url( get_permalink( $recent['ID'] ) ),
-                             apply_filters( 'the_title', $recent['post_title'], $recent['ID'] )
-                         );
-                    }
-                ?>
-           </div>
-
-       </div>
-   </div> -->
 </div>
